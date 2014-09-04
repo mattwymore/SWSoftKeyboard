@@ -1,0 +1,352 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09C7000119B92F3400B932B2 /* SWSoftKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C7000019B92F3400B932B2 /* SWSoftKeyboard.m */; };
+		09C7FFFF19B92F3400B932B2 /* SWSoftKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 09C7FFFE19B92F3400B932B2 /* SWSoftKeyboard.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		09C7000019B92F3400B932B2 /* SWSoftKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWSoftKeyboard.m; sourceTree = "<group>"; };
+		09C7000619B92F3500B932B2 /* SWSoftKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWSoftKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09C7000919B92F3500B932B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09C7FFFB19B92F3400B932B2 /* libSWSoftKeyboard.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libSWSoftKeyboard.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		09C7FFFE19B92F3400B932B2 /* SWSoftKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWSoftKeyboard.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09C7000319B92F3500B932B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09C7FFF819B92F3400B932B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09C7000719B92F3500B932B2 /* SWSoftKeyboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				09C7000819B92F3500B932B2 /* Supporting Files */,
+			);
+			path = SWSoftKeyboardTests;
+			sourceTree = "<group>";
+		};
+		09C7000819B92F3500B932B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09C7000919B92F3500B932B2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09C7FFF219B92F3400B932B2 = {
+			isa = PBXGroup;
+			children = (
+				09C7FFFD19B92F3400B932B2 /* SWSoftKeyboard */,
+				09C7000719B92F3500B932B2 /* SWSoftKeyboardTests */,
+				09C7FFFC19B92F3400B932B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		09C7FFFC19B92F3400B932B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09C7FFFB19B92F3400B932B2 /* libSWSoftKeyboard.dylib */,
+				09C7000619B92F3500B932B2 /* SWSoftKeyboardTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09C7FFFD19B92F3400B932B2 /* SWSoftKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				09C7FFFE19B92F3400B932B2 /* SWSoftKeyboard.h */,
+				09C7000019B92F3400B932B2 /* SWSoftKeyboard.m */,
+			);
+			path = SWSoftKeyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		09C7FFF919B92F3400B932B2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09C7FFFF19B92F3400B932B2 /* SWSoftKeyboard.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		09C7000519B92F3500B932B2 /* SWSoftKeyboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09C7000F19B92F3500B932B2 /* Build configuration list for PBXNativeTarget "SWSoftKeyboardTests" */;
+			buildPhases = (
+				09C7000219B92F3500B932B2 /* Sources */,
+				09C7000319B92F3500B932B2 /* Frameworks */,
+				09C7000419B92F3500B932B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SWSoftKeyboardTests;
+			productName = SWSoftKeyboardTests;
+			productReference = 09C7000619B92F3500B932B2 /* SWSoftKeyboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		09C7FFFA19B92F3400B932B2 /* SWSoftKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09C7000C19B92F3500B932B2 /* Build configuration list for PBXNativeTarget "SWSoftKeyboard" */;
+			buildPhases = (
+				09C7FFF719B92F3400B932B2 /* Sources */,
+				09C7FFF819B92F3400B932B2 /* Frameworks */,
+				09C7FFF919B92F3400B932B2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SWSoftKeyboard;
+			productName = SWSoftKeyboard;
+			productReference = 09C7FFFB19B92F3400B932B2 /* libSWSoftKeyboard.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09C7FFF319B92F3400B932B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Spencer Williams";
+				TargetAttributes = {
+					09C7000519B92F3500B932B2 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					09C7FFFA19B92F3400B932B2 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = 09C7FFF619B92F3400B932B2 /* Build configuration list for PBXProject "SWSoftKeyboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 09C7FFF219B92F3400B932B2;
+			productRefGroup = 09C7FFFC19B92F3400B932B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09C7FFFA19B92F3400B932B2 /* SWSoftKeyboard */,
+				09C7000519B92F3500B932B2 /* SWSoftKeyboardTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09C7000419B92F3500B932B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09C7000219B92F3500B932B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09C7FFF719B92F3400B932B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09C7000119B92F3400B932B2 /* SWSoftKeyboard.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		09C7000A19B92F3500B932B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		09C7000B19B92F3500B932B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		09C7000D19B92F3500B932B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		09C7000E19B92F3500B932B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		09C7001019B92F3500B932B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SWSoftKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		09C7001119B92F3500B932B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SWSoftKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09C7000C19B92F3500B932B2 /* Build configuration list for PBXNativeTarget "SWSoftKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09C7000D19B92F3500B932B2 /* Debug */,
+				09C7000E19B92F3500B932B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		09C7000F19B92F3500B932B2 /* Build configuration list for PBXNativeTarget "SWSoftKeyboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09C7001019B92F3500B932B2 /* Debug */,
+				09C7001119B92F3500B932B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		09C7FFF619B92F3400B932B2 /* Build configuration list for PBXProject "SWSoftKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09C7000A19B92F3500B932B2 /* Debug */,
+				09C7000B19B92F3500B932B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09C7FFF319B92F3400B932B2 /* Project object */;
+}
