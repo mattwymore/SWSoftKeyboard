@@ -16,9 +16,9 @@ typedef enum {
 } SWStickyKeyState;
 
 /**
- Objects that inherit this protocol may choose to respond to sticky-key events.
+ Objects that inherit this protocol may choose to respond to key events.
  */
-@protocol SWStickyKeyDelegate <NSObject>
+@protocol SWKeyDelegate <NSObject>
 @optional
 /**
  Notifies the delegate that a key has been "stuck" in a state
@@ -26,7 +26,17 @@ typedef enum {
  @param state   The sticky state the key is in.
  */
 - (void)softKeyboardKey:(SWSoftKeyboardKey *)key stickiedInState:(SWStickyKeyState)state;
+/**
+ Notifies the delegate that the key has been pressed
+ @param key The key
+ */
+- (void)softKeyboardKeyPressed:(SWSoftKeyboardKey *)key;
 @end
+
+
+
+
+
 
 /**
  Instances of SWSoftKeyboardKey represent individual keyboard keys. They contain certain
@@ -35,7 +45,7 @@ typedef enum {
  */
 @interface SWSoftKeyboardKey : NSActionCell
 /// The delegate to receive messages about this (sticky) key
-@property (nonatomic, weak) id<SWStickyKeyDelegate>stickyDelegate;
+@property (nonatomic, weak) id<SWKeyDelegate>keyDelegate;
 /// What "sticky state" the key is in
 @property (nonatomic, assign) SWStickyKeyState stickyState;
 /// Whether or not this key is sticky
@@ -45,7 +55,7 @@ typedef enum {
  The labels this key uses for certain keyboard/sticky states.
 
  State dictionaries are stored such that the first dictionary key is the keyboard key's sticky
- state, and the second dictionary key is the keyboard's layout state.
+ state (whether or not the key is stuck), and the second dictionary key is the keyboard's layout state.
  */
 @property (nonatomic, strong) NSDictionary *stateLabels;
 /// The values this key sends in certain keyboard/sticky states
@@ -54,17 +64,17 @@ typedef enum {
 
 /**
  Initializes a new key with particular attributes
- @param frame           The key's frame
- @param stateLabels     A dictionary of labels corresponding to specific keyboard/sticky states
- @param stateValues     A dictionary of values corresponding to specific keyboard/sticky states
- @param isSticky        Whether or not the key is sticky
- @param stickyDelegate  The key's sticky delegate
+ @param frame       The key's frame
+ @param stateLabels A dictionary of labels corresponding to specific keyboard/sticky states
+ @param stateValues A dictionary of values corresponding to specific keyboard/sticky states
+ @param isSticky    Whether or not the key is sticky
+ @param keyDelegate The key's delegate
  */
 - (id)initWithFrame:(NSRect)frame
         stateLabels:(NSDictionary *)stateLabels
         stateValues:(NSDictionary *)stateValues
              sticky:(BOOL)isSticky
-     stickyDelegate:(id<SWStickyKeyDelegate>)stickyDelegate;
+     keyDelegate:(id<SWKeyDelegate>)keyDelegate;
 /**
  Returns the label for a particular keyboard state, taking into account the key's sticky state
  @param keyboardState The keyboard's layout state
