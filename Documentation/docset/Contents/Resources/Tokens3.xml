@@ -124,9 +124,7 @@ values (frame).</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/setStateLabels:</TokenIdentifier>
-			<Abstract type="html">The labels this key uses for certain keyboard/sticky states
-State dictionaries are stored such that the first dictionary key is the keyboard key&apos;s sticky
-state, and the second dictionary key is the keyboard&apos;s layout state.</Abstract>
+			<Abstract type="html">The labels this key uses for certain keyboard/sticky states.</Abstract>
 			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) NSDictionary *stateLabels</Declaration>
@@ -138,9 +136,7 @@ state, and the second dictionary key is the keyboard&apos;s layout state.</Abstr
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/stateLabels</TokenIdentifier>
-			<Abstract type="html">The labels this key uses for certain keyboard/sticky states
-State dictionaries are stored such that the first dictionary key is the keyboard key&apos;s sticky
-state, and the second dictionary key is the keyboard&apos;s layout state.</Abstract>
+			<Abstract type="html">The labels this key uses for certain keyboard/sticky states.</Abstract>
 			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) NSDictionary *stateLabels</Declaration>
@@ -152,9 +148,7 @@ state, and the second dictionary key is the keyboard&apos;s layout state.</Abstr
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKey/stateLabels</TokenIdentifier>
-			<Abstract type="html">The labels this key uses for certain keyboard/sticky states
-State dictionaries are stored such that the first dictionary key is the keyboard key&apos;s sticky
-state, and the second dictionary key is the keyboard&apos;s layout state.</Abstract>
+			<Abstract type="html">The labels this key uses for certain keyboard/sticky states.</Abstract>
 			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) NSDictionary *stateLabels</Declaration>

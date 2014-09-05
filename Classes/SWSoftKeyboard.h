@@ -13,7 +13,7 @@
 @class SWSoftKeyboard;
 /// The keyboard's delegate
 @protocol SWSoftKeyboardDelegate <NSObject>
-/// Triggered when the user has finished using the keyoard,
+/// Triggered when the user has finished using the keyboard,
 /// and it needs to be visually dismissed.
 /// @param keyboard The keyboard that's ready to exit
 - (void)softKeyboardReadyToExit:(SWSoftKeyboard *)keyboard;

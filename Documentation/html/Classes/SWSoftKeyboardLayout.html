@@ -43,7 +43,7 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/keys">&nbsp;&nbsp;&nbsp;&nbsp;- keys</option>
+	<option value="//api/name/keysForState:">&nbsp;&nbsp;&nbsp;&nbsp;- keysForState:</option>
 	
 	<option value="//api/name/layoutStates">&nbsp;&nbsp;&nbsp;&nbsp;- layoutStates</option>
 	
@@ -75,7 +75,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keys">keys</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keysForState:">keysForState:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/layoutStates">layoutStates</a></span></li>
 	
@@ -134,7 +134,7 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/keys">&ndash;&nbsp;keys</a></code>
+		<code><a href="#//api/name/keysForState:">&ndash;&nbsp;keysForState:</a></code>
 	</span>
 	
 	
@@ -162,27 +162,46 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/keys" title="keys"></a>
-	<h3 class="subsubtitle method-title">keys</h3>
+	<a name="//api/name/keysForState:" title="keysForState:"></a>
+	<h3 class="subsubtitle method-title">keysForState:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The keys of this layout. In this class this returns an empty array,
-but subclasses of this class should return filled arrays of SWSoftKeys.</p>
+		<p>The keys of this layout.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (NSArray *)keys</code></div>
+	<div class="method-subsection method-declaration"><code>- (NSArray *)keysForState:(int)<em>layoutState</em></code></div>
 
     
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>layoutState</em></dt>
+			<dd><p>The state of the layout</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The keys in a particular state of this layout</p>
+	</div>
 	
 	
 	
 	
 	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>In this class this returns an empty array, but subclasses of this class should return filled arrays of SWSoftKeys.</p>
+	</div>
 	
 	
 	
@@ -205,8 +224,7 @@ but subclasses of this class should return filled arrays of SWSoftKeys.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The number of possible states of this layout. Like <a href="#//api/name/keys"><code>keys</code></a>, states
-should be defined in subclasses of this class.</p>
+		<p>The number of possible states of this layout.</p>
 	</div>		
 	
     
@@ -217,9 +235,21 @@ should be defined in subclasses of this class.</p>
 	
 	
 	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The number of possible states of thsi layout.</p>
+	</div>
 	
 	
 	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Like <code>keys</code>, states should be defined in subclasses of this class.
+Keyboards are initialized with a layout state of 0.
+State descriptions may be handled internally to subclasses of this class.</p>
+	</div>
 	
 	
 	

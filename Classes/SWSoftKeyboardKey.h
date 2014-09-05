@@ -41,9 +41,12 @@ typedef enum {
 /// Whether or not this key is sticky
 @property (nonatomic, assign) BOOL isSticky;
 
-/// The labels this key uses for certain keyboard/sticky states
-/// State dictionaries are stored such that the first dictionary key is the keyboard key's sticky
-/// state, and the second dictionary key is the keyboard's layout state.
+/**
+ The labels this key uses for certain keyboard/sticky states.
+
+ State dictionaries are stored such that the first dictionary key is the keyboard key's sticky
+ state, and the second dictionary key is the keyboard's layout state.
+ */
 @property (nonatomic, strong) NSDictionary *stateLabels;
 /// The values this key sends in certain keyboard/sticky states
 /// @see stateLabels

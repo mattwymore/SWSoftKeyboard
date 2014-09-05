@@ -14,7 +14,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/SWSoftKeyboardDelegate/softKeyboardReadyToExit:</TokenIdentifier>
-			<Abstract type="html">Triggered when the user has finished using the keyoard,
+			<Abstract type="html">Triggered when the user has finished using the keyboard,
 and it needs to be visually dismissed.</Abstract>
 			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
 			
