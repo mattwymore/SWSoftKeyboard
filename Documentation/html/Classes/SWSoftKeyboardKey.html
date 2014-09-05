@@ -41,11 +41,11 @@
 	
 	<option value="//api/name/isSticky">&nbsp;&nbsp;&nbsp;&nbsp;isSticky</option>
 	
+	<option value="//api/name/keyDelegate">&nbsp;&nbsp;&nbsp;&nbsp;keyDelegate</option>
+	
 	<option value="//api/name/stateLabels">&nbsp;&nbsp;&nbsp;&nbsp;stateLabels</option>
 	
 	<option value="//api/name/stateValues">&nbsp;&nbsp;&nbsp;&nbsp;stateValues</option>
-	
-	<option value="//api/name/stickyDelegate">&nbsp;&nbsp;&nbsp;&nbsp;stickyDelegate</option>
 	
 	<option value="//api/name/stickyState">&nbsp;&nbsp;&nbsp;&nbsp;stickyState</option>
 	
@@ -56,7 +56,7 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/initWithFrame:stateLabels:stateValues:sticky:stickyDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithFrame:stateLabels:stateValues:sticky:stickyDelegate:</option>
+	<option value="//api/name/initWithFrame:stateLabels:stateValues:sticky:keyDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithFrame:stateLabels:stateValues:sticky:keyDelegate:</option>
 	
 	<option value="//api/name/labelForKeyboardState:">&nbsp;&nbsp;&nbsp;&nbsp;- labelForKeyboardState:</option>
 	
@@ -88,11 +88,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isSticky">isSticky</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keyDelegate">keyDelegate</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stateLabels">stateLabels</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stateValues">stateValues</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stickyDelegate">stickyDelegate</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stickyState">stickyState</a></span></li>
 	
@@ -104,7 +104,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithFrame:stateLabels:stateValues:sticky:stickyDelegate:">initWithFrame:stateLabels:stateValues:sticky:stickyDelegate:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithFrame:stateLabels:stateValues:sticky:keyDelegate:">initWithFrame:stateLabels:stateValues:sticky:keyDelegate:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/labelForKeyboardState:">labelForKeyboardState:</a></span></li>
 	
@@ -167,7 +167,7 @@ values (<code>frame</code>).</p>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/stickyDelegate">&nbsp;&nbsp;stickyDelegate</a></code>
+		<code><a href="#//api/name/keyDelegate">&nbsp;&nbsp;keyDelegate</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -197,7 +197,7 @@ values (<code>frame</code>).</p>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithFrame:stateLabels:stateValues:sticky:stickyDelegate:">&ndash;&nbsp;initWithFrame:stateLabels:stateValues:sticky:stickyDelegate:</a></code>
+		<code><a href="#//api/name/initWithFrame:stateLabels:stateValues:sticky:keyDelegate:">&ndash;&nbsp;initWithFrame:stateLabels:stateValues:sticky:keyDelegate:</a></code>
 	</span>
 	
 	
@@ -263,6 +263,42 @@ values (<code>frame</code>).</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/keyDelegate" title="keyDelegate"></a>
+	<h3 class="subsubtitle method-title">keyDelegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The delegate to receive messages about this (sticky) key</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;SWKeyDelegate&gt; keyDelegate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SWSoftKeyboardKey.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/stateLabels" title="stateLabels"></a>
 	<h3 class="subsubtitle method-title">stateLabels</h3>
 	
@@ -287,7 +323,7 @@ values (<code>frame</code>).</p>
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>State dictionaries are stored such that the first dictionary key is the keyboard key&rsquo;s sticky
-state, and the second dictionary key is the keyboard&rsquo;s layout state.</p>
+state (whether or not the key is stuck), and the second dictionary key is the keyboard&rsquo;s layout state.</p>
 	</div>
 	
 	
@@ -350,42 +386,6 @@ state, and the second dictionary key is the keyboard&rsquo;s layout state.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/stickyDelegate" title="stickyDelegate"></a>
-	<h3 class="subsubtitle method-title">stickyDelegate</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The delegate to receive messages about this (sticky) key</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;SWStickyKeyDelegate&gt; stickyDelegate</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SWSoftKeyboardKey.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/stickyState" title="stickyState"></a>
 	<h3 class="subsubtitle method-title">stickyState</h3>
 	
@@ -432,8 +432,8 @@ state, and the second dictionary key is the keyboard&rsquo;s layout state.</p>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithFrame:stateLabels:stateValues:sticky:stickyDelegate:" title="initWithFrame:stateLabels:stateValues:sticky:stickyDelegate:"></a>
-	<h3 class="subsubtitle method-title">initWithFrame:stateLabels:stateValues:sticky:stickyDelegate:</h3>
+	<a name="//api/name/initWithFrame:stateLabels:stateValues:sticky:keyDelegate:" title="initWithFrame:stateLabels:stateValues:sticky:keyDelegate:"></a>
+	<h3 class="subsubtitle method-title">initWithFrame:stateLabels:stateValues:sticky:keyDelegate:</h3>
 	
 	
 	
@@ -443,7 +443,7 @@ state, and the second dictionary key is the keyboard&rsquo;s layout state.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (id)initWithFrame:(NSRect)<em>frame</em> stateLabels:(NSDictionary *)<em>stateLabels</em> stateValues:(NSDictionary *)<em>stateValues</em> sticky:(BOOL)<em>isSticky</em> stickyDelegate:(id&lt;SWStickyKeyDelegate&gt;)<em>stickyDelegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (id)initWithFrame:(NSRect)<em>frame</em> stateLabels:(NSDictionary *)<em>stateLabels</em> stateValues:(NSDictionary *)<em>stateValues</em> sticky:(BOOL)<em>isSticky</em> keyDelegate:(id&lt;SWKeyDelegate&gt;)<em>keyDelegate</em></code></div>
 
     
 	
@@ -471,8 +471,8 @@ state, and the second dictionary key is the keyboard&rsquo;s layout state.</p>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>stickyDelegate</em></dt>
-			<dd><p>The key&rsquo;s sticky delegate</p></dd>
+			<dt><em>keyDelegate</em></dt>
+			<dd><p>The key&rsquo;s delegate</p></dd>
 		</dl>
 		
 	</div>

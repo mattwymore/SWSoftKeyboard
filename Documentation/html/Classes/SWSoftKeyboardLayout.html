@@ -37,11 +37,18 @@
 	
 	
 	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/keyDelegate">&nbsp;&nbsp;&nbsp;&nbsp;keyDelegate</option>
+	
+	
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/commonAlphabetKeys">&nbsp;&nbsp;&nbsp;&nbsp;- commonAlphabetKeys</option>
 	
 	<option value="//api/name/keysForState:">&nbsp;&nbsp;&nbsp;&nbsp;- keysForState:</option>
 	
@@ -69,11 +76,19 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keyDelegate">keyDelegate</a></span></li>
+	
+</ul></li>
+
 
 
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/commonAlphabetKeys">commonAlphabetKeys</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keysForState:">keysForState:</a></span></li>
 	
@@ -134,6 +149,12 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
+		<code><a href="#//api/name/keyDelegate">&nbsp;&nbsp;keyDelegate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/keysForState:">&ndash;&nbsp;keysForState:</a></code>
 	</span>
 	
@@ -141,6 +162,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/layoutStates">&ndash;&nbsp;layoutStates</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/commonAlphabetKeys">&ndash;&nbsp;commonAlphabetKeys</a></code>
 	</span>
 	
 	
@@ -153,6 +180,48 @@
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/keyDelegate" title="keyDelegate"></a>
+	<h3 class="subsubtitle method-title">keyDelegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The delegate to pass to each of the keys</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;SWKeyDelegate&gt; keyDelegate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SWSoftKeyboardLayout.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
 					
 					
 					
@@ -160,6 +229,52 @@
 					<div class="section section-methods">
 						<a title="Instance Methods" name="instance_methods"></a>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/commonAlphabetKeys" title="commonAlphabetKeys"></a>
+	<h3 class="subsubtitle method-title">commonAlphabetKeys</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns common alphabet keys, in QWERTY order.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)commonAlphabetKeys</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Common alphabet keys in QWERTY order.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Assumes two layout states: 0=shift key unpressed (unstuck), 1=shift key pressed (stuck).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SWSoftKeyboardLayout.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/keysForState:" title="keysForState:"></a>

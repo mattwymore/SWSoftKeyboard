@@ -13,6 +13,42 @@
 		
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardLayout/setKeyDelegate:</TokenIdentifier>
+			<Abstract type="html">The delegate to pass to each of the keys</Abstract>
+			<DeclaredIn>SWSoftKeyboardLayout.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SWKeyDelegate&gt; keyDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/keyDelegate</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardLayout/keyDelegate</TokenIdentifier>
+			<Abstract type="html">The delegate to pass to each of the keys</Abstract>
+			<DeclaredIn>SWSoftKeyboardLayout.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SWKeyDelegate&gt; keyDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/keyDelegate</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardLayout/keyDelegate</TokenIdentifier>
+			<Abstract type="html">The delegate to pass to each of the keys</Abstract>
+			<DeclaredIn>SWSoftKeyboardLayout.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SWKeyDelegate&gt; keyDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/keyDelegate</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardLayout/keysForState:</TokenIdentifier>
 			<Abstract type="html">The keys of this layout.</Abstract>
 			<DeclaredIn>SWSoftKeyboardLayout.h</DeclaredIn>
@@ -38,6 +74,18 @@
 			
 			<ReturnValue><Abstract type="html">The number of possible states of thsi layout.</Abstract></ReturnValue>
 			<Anchor>//api/name/layoutStates</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardLayout/commonAlphabetKeys</TokenIdentifier>
+			<Abstract type="html">Returns common alphabet keys, in QWERTY order.</Abstract>
+			<DeclaredIn>SWSoftKeyboardLayout.h</DeclaredIn>
+			
+			<Declaration>- (NSArray *)commonAlphabetKeys</Declaration>
+			
+			<ReturnValue><Abstract type="html">Common alphabet keys in QWERTY order.</Abstract></ReturnValue>
+			<Anchor>//api/name/commonAlphabetKeys</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		

@@ -126,6 +126,12 @@
                     <Anchor>tasks</Anchor>
                 </Node>
                 
+                <Node type="section">
+                    <Path>Classes/SWSoftKeyboardLayout.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
                 
                 
                 <Node type="section">
@@ -145,6 +151,33 @@
 		
 		
         <Node id="6" type="file" documentType="reference">
+            <Name>SWKeyDelegate</Name>
+            <Path>Protocols/SWKeyDelegate.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Protocols/SWKeyDelegate.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Protocols/SWKeyDelegate.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Protocols/SWKeyDelegate.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="7" type="file" documentType="reference">
             <Name>SWSoftKeyboardDelegate</Name>
             <Path>Protocols/SWSoftKeyboardDelegate.html</Path>
             
@@ -164,33 +197,6 @@
                 
                 <Node type="section">
                     <Path>Protocols/SWSoftKeyboardDelegate.html</Path>
-                    <Name>Instance Methods</Name>
-                    <Anchor>instance_methods</Anchor>
-                </Node>
-                
-            </Subnodes>
-            
-        </Node>
-		<Node id="7" type="file" documentType="reference">
-            <Name>SWStickyKeyDelegate</Name>
-            <Path>Protocols/SWStickyKeyDelegate.html</Path>
-            
-                <Subnodes>
-                <Node type="section">
-                    <Path>Protocols/SWStickyKeyDelegate.html</Path>
-                    <Name>Overview</Name>
-                    <Anchor>overview</Anchor>
-                </Node>
-                <Node type="section">
-                    <Path>Protocols/SWStickyKeyDelegate.html</Path>
-                    <Name>Tasks</Name>
-                    <Anchor>tasks</Anchor>
-                </Node>
-                
-                
-                
-                <Node type="section">
-                    <Path>Protocols/SWStickyKeyDelegate.html</Path>
                     <Name>Instance Methods</Name>
                     <Anchor>instance_methods</Anchor>
                 </Node>

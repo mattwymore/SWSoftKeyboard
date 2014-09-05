@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/SWSoftKeyboardDelegate.html">
+	<File path="Protocols/SWKeyDelegate.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/SWSoftKeyboardDelegate</TokenIdentifier>
-			<Abstract type="html">The keyboard&apos;s delegate</Abstract>
-			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/SWKeyDelegate</TokenIdentifier>
+			<Abstract type="html">Objects that inherit this protocol may choose to respond to key events.</Abstract>
+			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
             
 			
 			<NodeRef refid="6"/>
@@ -13,20 +13,39 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/SWSoftKeyboardDelegate/softKeyboardReadyToExit:</TokenIdentifier>
-			<Abstract type="html">Triggered when the user has finished using the keyboard,
-and it needs to be visually dismissed.</Abstract>
-			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/SWKeyDelegate/softKeyboardKey:stickiedInState:</TokenIdentifier>
+			<Abstract type="html">Notifies the delegate that a key has been &quot;stuck&quot; in a state</Abstract>
+			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
 			
-			<Declaration>- (void)softKeyboardReadyToExit:(SWSoftKeyboard *)keyboard</Declaration>
+			<Declaration>- (void)softKeyboardKey:(SWSoftKeyboardKey *)key stickiedInState:(SWStickyKeyState)state</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>keyboard</Name>
-					<Abstract type="html">The keyboard that&apos;s ready to exit</Abstract>
+					<Name>key</Name>
+					<Abstract type="html">The key.</Abstract>
+				</Parameter><Parameter>
+					<Name>state</Name>
+					<Abstract type="html">The sticky state the key is in.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/softKeyboardReadyToExit:</Anchor>
+			<Anchor>//api/name/softKeyboardKey:stickiedInState:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SWKeyDelegate/softKeyboardKeyPressed:</TokenIdentifier>
+			<Abstract type="html">Notifies the delegate that the key has been pressed</Abstract>
+			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			
+			<Declaration>- (void)softKeyboardKeyPressed:(SWSoftKeyboardKey *)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The key</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/softKeyboardKeyPressed:</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		

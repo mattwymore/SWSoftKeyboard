@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>SWStickyKeyDelegate Protocol Reference</title>
+		<title>SWKeyDelegate Protocol Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">SWStickyKeyDelegate Protocol Reference</h1>
+				<h1 class="hideInXcode">SWKeyDelegate Protocol Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -44,6 +44,8 @@
 	<option value="instance_methods">Instance Methods</option>
 	
 	<option value="//api/name/softKeyboardKey:stickiedInState:">&nbsp;&nbsp;&nbsp;&nbsp;- softKeyboardKey:stickiedInState:</option>
+	
+	<option value="//api/name/softKeyboardKeyPressed:">&nbsp;&nbsp;&nbsp;&nbsp;- softKeyboardKeyPressed:</option>
 	
 	
 	
@@ -75,6 +77,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/softKeyboardKey:stickiedInState:">softKeyboardKey:stickiedInState:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/softKeyboardKeyPressed:">softKeyboardKeyPressed:</a></span></li>
+	
 </ul></li>
 
 
@@ -82,7 +86,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="SWStickyKeyDelegate Protocol Reference" name="top"></a>
+				<a title="SWKeyDelegate Protocol Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -91,7 +95,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">SWStickyKeyDelegate Protocol Reference</h1>
+						<h1 class="title title-header">SWKeyDelegate Protocol Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -112,7 +116,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Objects that inherit this protocol may choose to respond to sticky-key events.</p>
+						<p>Objects that inherit this protocol may choose to respond to key events.</p>
 					</div>
 					
 					
@@ -131,6 +135,12 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/softKeyboardKey:stickiedInState:">&ndash;&nbsp;softKeyboardKey:stickiedInState:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/softKeyboardKeyPressed:">&ndash;&nbsp;softKeyboardKeyPressed:</a></code>
 	</span>
 	
 	
@@ -178,6 +188,52 @@
 		<dl class="argument-def parameter-def">
 			<dt><em>state</em></dt>
 			<dd><p>The sticky state the key is in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SWSoftKeyboardKey.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/softKeyboardKeyPressed:" title="softKeyboardKeyPressed:"></a>
+	<h3 class="subsubtitle method-title">softKeyboardKeyPressed:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Notifies the delegate that the key has been pressed</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)softKeyboardKeyPressed:(SWSoftKeyboardKey *)<em>key</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>The key</p></dd>
 		</dl>
 		
 	</div>

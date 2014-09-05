@@ -15,38 +15,38 @@ values (frame).</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/setStickyDelegate:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/setKeyDelegate:</TokenIdentifier>
 			<Abstract type="html">The delegate to receive messages about this (sticky) key</Abstract>
 			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, weak) id&lt;SWStickyKeyDelegate&gt; stickyDelegate</Declaration>
+			<Declaration>@property (nonatomic, weak) id&lt;SWKeyDelegate&gt; keyDelegate</Declaration>
 			
 			
-			<Anchor>//api/name/stickyDelegate</Anchor>
+			<Anchor>//api/name/keyDelegate</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/stickyDelegate</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/keyDelegate</TokenIdentifier>
 			<Abstract type="html">The delegate to receive messages about this (sticky) key</Abstract>
 			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, weak) id&lt;SWStickyKeyDelegate&gt; stickyDelegate</Declaration>
+			<Declaration>@property (nonatomic, weak) id&lt;SWKeyDelegate&gt; keyDelegate</Declaration>
 			
 			
-			<Anchor>//api/name/stickyDelegate</Anchor>
+			<Anchor>//api/name/keyDelegate</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKey/stickyDelegate</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKey/keyDelegate</TokenIdentifier>
 			<Abstract type="html">The delegate to receive messages about this (sticky) key</Abstract>
 			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, weak) id&lt;SWStickyKeyDelegate&gt; stickyDelegate</Declaration>
+			<Declaration>@property (nonatomic, weak) id&lt;SWKeyDelegate&gt; keyDelegate</Declaration>
 			
 			
-			<Anchor>//api/name/stickyDelegate</Anchor>
+			<Anchor>//api/name/keyDelegate</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
@@ -210,11 +210,11 @@ values (frame).</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/initWithFrame:stateLabels:stateValues:sticky:stickyDelegate:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/initWithFrame:stateLabels:stateValues:sticky:keyDelegate:</TokenIdentifier>
 			<Abstract type="html">Initializes a new key with particular attributes</Abstract>
 			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
 			
-			<Declaration>- (id)initWithFrame:(NSRect)frame stateLabels:(NSDictionary *)stateLabels stateValues:(NSDictionary *)stateValues sticky:(BOOL)isSticky stickyDelegate:(id&lt;SWStickyKeyDelegate&gt;)stickyDelegate</Declaration>
+			<Declaration>- (id)initWithFrame:(NSRect)frame stateLabels:(NSDictionary *)stateLabels stateValues:(NSDictionary *)stateValues sticky:(BOOL)isSticky keyDelegate:(id&lt;SWKeyDelegate&gt;)keyDelegate</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>frame</Name>
@@ -229,12 +229,12 @@ values (frame).</Abstract>
 					<Name>isSticky</Name>
 					<Abstract type="html">Whether or not the key is sticky</Abstract>
 				</Parameter><Parameter>
-					<Name>stickyDelegate</Name>
-					<Abstract type="html">The key&apos;s sticky delegate</Abstract>
+					<Name>keyDelegate</Name>
+					<Abstract type="html">The key&apos;s delegate</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/initWithFrame:stateLabels:stateValues:sticky:stickyDelegate:</Anchor>
+			<Anchor>//api/name/initWithFrame:stateLabels:stateValues:sticky:keyDelegate:</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		

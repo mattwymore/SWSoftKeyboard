@@ -32,5 +32,11 @@
  */
 - (int)layoutStates;
 
+/**
+ Returns common alphabet keys, in QWERTY order.
+ 
+ Assumes two layout states: 0=shift key unpressed (unstuck), 1=shift key pressed (stuck).
+ @return Common alphabet keys in QWERTY order.
+ */
 - (NSArray *)commonAlphabetKeys;
 @end
