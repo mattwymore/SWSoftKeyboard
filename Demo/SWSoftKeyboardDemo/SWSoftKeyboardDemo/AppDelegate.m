@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SWSoftKeyboard.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +24,18 @@
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
+}
+
+#pragma mark - NSTextFieldDelegate
+
+- (void)controlTextDidBeginEditing:(NSNotification *)obj
+{
+    
+}
+
+- (void)controlTextDidEndEditing:(NSNotification *)obj
+{
+    
 }
 
 @end

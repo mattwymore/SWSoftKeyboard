@@ -1,8 +1,8 @@
 #SWSoftKeyboard
 
-A drop-in library that enables your Mac app to show an on-screen keyboard.
+A drop-in framework that enables your Mac app to show an on-screen keyboard.
 
-**Note: I'm currently working on the first version of this library, so it doesn't actually do anything yet!** Want to help out? Drop me a line at [@spilliams](https://twitter.com/spilliams) or [s@spencerenglish.com](mailto:s@spencerenglish.com).
+**Note: I'm currently working on the first version of this framework, so it doesn't actually do anything yet!** Want to help out? Drop me a line at [@spilliams](https://twitter.com/spilliams) or [s@spencerenglish.com](mailto:s@spencerenglish.com).
 
 Provides framework for easily adding new keyboard layouts and custom keys.
 
@@ -11,8 +11,8 @@ Instead, this keyboard updates its given set of NSTextFields with new values dir
 
 Included in this codebase:
 
-- "Classes" contains the library implementing a soft keyboard, as well as an "email address" keyboard layout (see below)
-- "Demo" contains a demonstration of the library
+- "Classes" contains the framework implementing a soft keyboard, as well as an "email address" keyboard layout (see below)
+- "Demo" contains a demonstration of the framework
 - "Documentation" contains compiled documentation via [appledoc](http://gentlebytes.com/appledoc/)
 
 ##On Keyboard Layouts
@@ -23,15 +23,15 @@ A keyboard layout contains two types of keys: content keys and control keys. Con
 
 Some of the control keys may be "sticky". That is, clicking on one will toggle it between on and off, as opposed to a momentary press. Likely candidates for sticky keys include fn, Ctrl, Alt and Cmd. It's up to your layout to set these keys as sticky. All sticky keys initialize with a "sticky state" of Up (unpressed).
 
-**This library currently does not handle pressing more than one key at a time, so control keys should definitely be sticky!**
+**This framework currently does not handle pressing more than one key at a time, so control keys should definitely be sticky!**
 
-Since the application I'm building this library for uses email addresses, I'll continue by describing an email address layout, which is included in Classes/Keyboard Layouts.
+Since the application I'm building this framework for uses email addresses, I'll continue by describing an email address layout, which is included in Classes/Keyboard Layouts.
 
 It contains the basic 36 alphanumerics, as well as common email address punctuation (@, -, _, . etc.). There is a return key which dismisses the keyboard and resigns first responder of the text field. There is a backspace key but no space key. There's a shift key to control letter case. The layout itself has two states: "shift up" (0) and "shift down" (1). It returns the same set of keys for each state (since pressing shift doesn't add or remove keys from the keyboard). When the sticky shift key is toggled, the keys' look will update through the keyboard's display lifecycle. Any letter keys pressed will send values based on the keyboard's layout state.
 
 ##Development
 
-I'm currently developing this with Xcode 6 beta 6, running on Yosemite Beta Version 2. The library is intended to be used in OS X 10.9+ applications.
+I'm currently developing this with Xcode 6 beta 6, running on Yosemite Beta Version 2. The framework is intended to be used in OS X 10.9+ applications.
 
 ###TODO
 
