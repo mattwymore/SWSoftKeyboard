@@ -8,6 +8,7 @@
 
 #import "SWSoftKeyboard.h"
 #import "SWSoftKeyboardLayout.h"
+#import "SWSoftKeyboardKey.h"
 
 @implementation SWSoftKeyboard
 

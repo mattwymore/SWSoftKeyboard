@@ -10,6 +10,7 @@
 
 #import "SWSoftKeyboardLayout.h"
 
+
 @class SWSoftKeyboard;
 /// The keyboard's delegate
 @protocol SWSoftKeyboardDelegate <NSObject>
@@ -18,6 +19,8 @@
 /// @param keyboard The keyboard that's ready to exit
 - (void)softKeyboardReadyToExit:(SWSoftKeyboard *)keyboard;
 @end
+
+@protocol SWKeyDelegate;
 
 /// A soft keyboard! handles the key presses, shift/sticky state
 @interface SWSoftKeyboard : NSControl <SWKeyDelegate>

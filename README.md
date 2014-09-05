@@ -12,6 +12,7 @@ Instead, this keyboard updates its given set of NSTextFields with new values dir
 Included in this codebase:
 
 - "Classes" contains the library implementing a soft keyboard, as well as an "email address" keyboard layout (see below)
+- "Demo" contains a demonstration of the library
 - "Documentation" contains compiled documentation via [appledoc](http://gentlebytes.com/appledoc/)
 
 ##On Keyboard Layouts
