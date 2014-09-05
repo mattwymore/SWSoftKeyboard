@@ -20,7 +20,7 @@
 @end
 
 /// A soft keyboard! handles the key presses, shift/sticky state
-@interface SWSoftKeyboard : NSControl
+@interface SWSoftKeyboard : NSControl <SWKeyDelegate>
 /// The keyboard's delegate.
 @property (nonatomic, weak) id<SWSoftKeyboardDelegate>delegate;
 /// The keyboard's layout.

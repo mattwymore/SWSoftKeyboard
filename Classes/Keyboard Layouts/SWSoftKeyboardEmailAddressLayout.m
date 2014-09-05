@@ -9,9 +9,16 @@
 #import "SWSoftKeyboardEmailAddressLayout.h"
 
 @implementation SWSoftKeyboardEmailAddressLayout
-- (NSArray *)keys
+- (NSArray *)keysForState:(int)layoutState
 {
+    // this layout actually doesn't care about layout state
     
+    NSMutableArray *keysArray = [NSMutableArray new];
+    
+    NSArray *alphabetKeys = [self commonAlphabetKeys];
+    // update frame data for all keys
+    // TODO: incomplete
+    return keysArray;
 }
 - (int)layoutStates
 {

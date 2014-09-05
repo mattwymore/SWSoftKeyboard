@@ -7,6 +7,7 @@
 //
 
 #import "SWSoftKeyboard.h"
+#import "SWSoftKeyboardLayout.h"
 
 @implementation SWSoftKeyboard
 
@@ -21,6 +22,7 @@
 - (void)setKeyboardLayout:(SWSoftKeyboardLayout *)keyboardLayout
 {
     _keyboardLayout = keyboardLayout;
+    [self.keyboardLayout setKeyDelegate:self];
     self.layoutState = 0;
     self.needsDisplay = YES;
 }

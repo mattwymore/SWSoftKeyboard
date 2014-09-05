@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol SWKeyDelegate;
+
 /// An interface that describes how to interact with a keyboard layout
 @interface SWSoftKeyboardLayout : NSObject
+/// The delegate to pass to each of the keys
+@property (nonatomic, weak) id<SWKeyDelegate> keyDelegate;
 /**
  The keys of this layout.
  
@@ -27,4 +31,6 @@
  @return The number of possible states of thsi layout.
  */
 - (int)layoutStates;
+
+- (NSArray *)commonAlphabetKeys;
 @end

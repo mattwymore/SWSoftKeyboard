@@ -7,9 +7,10 @@
 //
 
 #import "SWSoftKeyboardLayout.h"
+#import "SWSoftKeyboardKey.h"
 
 @implementation SWSoftKeyboardLayout
-- (NSArray *)keys
+- (NSArray *)keysForState:(int)layoutState
 {
     // empty layout
     return @[];
@@ -17,5 +18,29 @@
 - (int)layoutStates
 {
     return 1;
+}
+- (NSArray *)commonAlphabetKeys
+{
+    NSMutableArray *keys = [NSMutableArray new];
+    NSArray *lowercase = @[@"q",@"w",@"e",@"r",@"t",@"y",@"u",@"i",@"o",@"p",@"a",@"s",@"d",@"f",@"g",@"h",@"j",@"k",@"l",@"z",@"x",@"c",@"v",@"b",@"n",@"m"];
+    NSArray *uppercase = @[@"Q",@"W",@"E",@"R",@"T",@"Y",@"U",@"I",@"O",@"P",@"A",@"S",@"D",@"F",@"G",@"H",@"J",@"K",@"L",@"Z",@"X",@"C",@"V",@"B",@"N",@"M"];
+    for (int i=0; i<lowercase.count; i++) {
+        NSString *lowerLetter = [lowercase objectAtIndex:i];
+        NSString *upperLetter = [uppercase objectAtIndex:i];
+        // assumes keyboard layout states of
+        // 0 = shift key is unpressed (unstuck)
+        // 1 = shift key is pressed (stuck)
+        NSDictionary *stuckLabels = [NSDictionary dictionaryWithObjectsAndKeys:
+                                     lowerLetter,[NSNumber numberWithInt:0],
+                                     upperLetter,[NSNumber numberWithInt:1],nil];
+        // stuck and notstuck labels and values are identical: these keys aren't sticky
+        NSDictionary *stateLabels = [NSDictionary dictionaryWithObjectsAndKeys:
+                                     [stuckLabels copy],[NSNumber numberWithInt:SWStickyKeyStateUp],
+                                     [stuckLabels copy],[NSNumber numberWithInt:SWStickyKeyStateDown],nil];
+        
+        SWSoftKeyboardKey *key = [[SWSoftKeyboardKey alloc] initWithFrame:NSZeroRect stateLabels:stateLabels stateValues:[stateLabels copy] sticky:NO keyDelegate:self.keyDelegate];
+        [keys addObject:key];
+    }
+    return keys;
 }
 @end
