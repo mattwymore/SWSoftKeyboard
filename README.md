@@ -26,7 +26,17 @@ Some of the control keys may be "sticky". That is, clicking on one will toggle i
 
 Since the application I'm building this library for uses email addresses, I'll continue by describing an email address layout, which is included in Classes/Keyboard Layouts.
 
-It contains the basic 36 alphanumerics, as well as common email address punctuation (@, -, _, . etc.). There is a return key which dismisses the keyboard and resigns first responder of the text field. There is a backspace key but no space key. There's a shift key to control letter case.
+It contains the basic 36 alphanumerics, as well as common email address punctuation (@, -, _, . etc.). There is a return key which dismisses the keyboard and resigns first responder of the text field. There is a backspace key but no space key. There's a shift key to control letter case. The layout itself has two states: "shift up" (0) and "shift down" (1). It returns the same set of keys for each state (since pressing shift doesn't add or remove keys from the keyboard). When the sticky shift key is toggled, the keys' look will update through the keyboard's display lifecycle. Any letter keys pressed will send values based on the keyboard's layout state.
+
+##Development
+
+I'm currently developing this with Xcode 6 beta 6, running on Yosemite Beta Version 2. The library is intended to be used in OS X 10.9+ applications.
+
+###TODO
+
+- write the whole codez
+- podify it
+- example usage
 
 ##License
 
