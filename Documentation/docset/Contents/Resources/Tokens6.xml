@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SWSoftKeyboardDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SWSoftKeyboardDelegate</TokenIdentifier>
+			<Abstract type="html">The keyboard&apos;s delegate</Abstract>
+			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
+            
+			
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SWSoftKeyboardDelegate/softKeyboardReadyToExit:</TokenIdentifier>
+			<Abstract type="html">Triggered when the user has finished using the keyoard,
+and it needs to be visually dismissed.</Abstract>
+			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
+			
+			<Declaration>- (void)softKeyboardReadyToExit:(SWSoftKeyboard *)keyboard</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>keyboard</Name>
+					<Abstract type="html">The keyboard that&apos;s ready to exit</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/softKeyboardReadyToExit:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

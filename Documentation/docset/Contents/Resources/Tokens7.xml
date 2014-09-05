@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SWStickyKeyDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SWStickyKeyDelegate</TokenIdentifier>
+			<Abstract type="html">Objects that inherit this protocol may choose to respond to sticky-key events.</Abstract>
+			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+            
+			
+			<NodeRef refid="7"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SWStickyKeyDelegate/softKeyboardKey:stickiedInState:</TokenIdentifier>
+			<Abstract type="html">Notifies the delegate that a key has been &quot;stuck&quot; in a state</Abstract>
+			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			
+			<Declaration>- (void)softKeyboardKey:(SWSoftKeyboardKey *)key stickiedInState:(SWStickyKeyState)state</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The key.</Abstract>
+				</Parameter><Parameter>
+					<Name>state</Name>
+					<Abstract type="html">The sticky state the key is in.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/softKeyboardKey:stickiedInState:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SWSoftKeyboardLayout.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SWSoftKeyboardLayout</TokenIdentifier>
+			<Abstract type="html">An interface that describes how to interact with a keyboard layout</Abstract>
+			<DeclaredIn>SWSoftKeyboardLayout.h</DeclaredIn>
+            
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardLayout/keys</TokenIdentifier>
+			<Abstract type="html">The keys of this layout. In this class this returns an empty array,
+but subclasses of this class should return filled arrays of SWSoftKeys.</Abstract>
+			<DeclaredIn>SWSoftKeyboardLayout.h</DeclaredIn>
+			
+			<Declaration>- (NSArray *)keys</Declaration>
+			
+			
+			<Anchor>//api/name/keys</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardLayout/layoutStates</TokenIdentifier>
+			<Abstract type="html">The number of possible states of this layout. Like keys, states
+should be defined in subclasses of this class.</Abstract>
+			<DeclaredIn>SWSoftKeyboardLayout.h</DeclaredIn>
+			
+			<Declaration>- (int)layoutStates</Declaration>
+			
+			
+			<Anchor>//api/name/layoutStates</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

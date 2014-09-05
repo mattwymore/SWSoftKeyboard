@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SWSoftKeyboard.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SWSoftKeyboard</TokenIdentifier>
+			<Abstract type="html">A soft keyboard! handles the key presses, shift/sticky state</Abstract>
+			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboard/setDelegate:</TokenIdentifier>
+			<Abstract type="html">The keyboard&apos;s delegate.</Abstract>
+			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SWSoftKeyboardDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboard/delegate</TokenIdentifier>
+			<Abstract type="html">The keyboard&apos;s delegate.</Abstract>
+			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SWSoftKeyboardDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboard/delegate</TokenIdentifier>
+			<Abstract type="html">The keyboard&apos;s delegate.</Abstract>
+			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SWSoftKeyboardDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboard/setKeyboardLayout:</TokenIdentifier>
+			<Abstract type="html">The keyboard&apos;s layout.</Abstract>
+			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) SWSoftKeyboardLayout *keyboardLayout</Declaration>
+			
+			
+			<Anchor>//api/name/keyboardLayout</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboard/keyboardLayout</TokenIdentifier>
+			<Abstract type="html">The keyboard&apos;s layout.</Abstract>
+			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) SWSoftKeyboardLayout *keyboardLayout</Declaration>
+			
+			
+			<Anchor>//api/name/keyboardLayout</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboard/keyboardLayout</TokenIdentifier>
+			<Abstract type="html">The keyboard&apos;s layout.</Abstract>
+			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) SWSoftKeyboardLayout *keyboardLayout</Declaration>
+			
+			
+			<Anchor>//api/name/keyboardLayout</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboard/setLayoutState:</TokenIdentifier>
+			<Abstract type="html">The keyboard&apos;s layout state. Initializes as 0.</Abstract>
+			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) int layoutState</Declaration>
+			
+			
+			<Anchor>//api/name/layoutState</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboard/layoutState</TokenIdentifier>
+			<Abstract type="html">The keyboard&apos;s layout state. Initializes as 0.</Abstract>
+			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) int layoutState</Declaration>
+			
+			
+			<Anchor>//api/name/layoutState</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboard/layoutState</TokenIdentifier>
+			<Abstract type="html">The keyboard&apos;s layout state. Initializes as 0.</Abstract>
+			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) int layoutState</Declaration>
+			
+			
+			<Anchor>//api/name/layoutState</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboard/initWithLayout:</TokenIdentifier>
+			<Abstract type="html">Initializes a new keyboard with a particular layout</Abstract>
+			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithLayout:(SWSoftKeyboardLayout *)keyboardLayout</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>keyboardLayout</Name>
+					<Abstract type="html">The layout.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithLayout:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>
