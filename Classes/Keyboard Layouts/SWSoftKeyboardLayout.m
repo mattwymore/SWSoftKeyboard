@@ -10,6 +10,7 @@
 #import "SWSoftKeyboardKey.h"
 
 @implementation SWSoftKeyboardLayout
+
 - (NSArray *)keysForState:(int)layoutState
 {
     // empty layout
@@ -43,4 +44,5 @@
     }
     return keys;
 }
+
 @end

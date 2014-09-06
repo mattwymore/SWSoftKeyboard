@@ -38,6 +38,7 @@ I'm currently developing this with Xcode 6 beta 6, running on Yosemite Beta Vers
 - write the whole codez
 - podify it
 - example usage
+- animating the presentation of the keyboard is currently up to the developer. Provide some support for this?
 
 ##License
 

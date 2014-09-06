@@ -33,9 +33,18 @@
 - (int)layoutStates;
 
 /**
+ Returns an array of SWSoftKeyboardKeys based on an array of NSStrings.
+ 
+ Assumes two layout states: 0=shift key unpressed (unstuck), 1=shift key pressed (stuck).  
+ Key values will be identical to key labels.
+ Key values and labels will not change between key sticky states.
+ */
+- (NSArray *)simpleKeysFromKeyboardShiftDownCharacters:(NSArray *)keyboardShiftDownCharacters
+                             keyboardShiftUpCharacters:(NSArray *)keyboardShiftUpCharacters;
+/**
  Returns common alphabet keys, in QWERTY order.
  
- Assumes two layout states: 0=shift key unpressed (unstuck), 1=shift key pressed (stuck).
+
  @return Common alphabet keys in QWERTY order.
  */
 - (NSArray *)commonAlphabetKeys;
