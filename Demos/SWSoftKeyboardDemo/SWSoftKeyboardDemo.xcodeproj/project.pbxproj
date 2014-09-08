@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0908BA2A19BE320600F9D5F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0908BA2919BE320600F9D5F8 /* main.m */; };
+		0908BA2D19BE320600F9D5F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0908BA2C19BE320600F9D5F8 /* AppDelegate.m */; };
+		0908BA2F19BE320600F9D5F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0908BA2E19BE320600F9D5F8 /* Images.xcassets */; };
+		0908BA3219BE320600F9D5F8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0908BA3019BE320600F9D5F8 /* MainMenu.xib */; };
+		0908BA3E19BE320600F9D5F8 /* SWSoftKeyboardDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0908BA3D19BE320600F9D5F8 /* SWSoftKeyboardDemoTests.m */; };
+		0908BA5319BE323700F9D5F8 /* SWSoftKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0908BA4E19BE321C00F9D5F8 /* SWSoftKeyboard.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0908BA3819BE320600F9D5F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0908BA1C19BE320600F9D5F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0908BA2319BE320600F9D5F8;
+			remoteInfo = SWSoftKeyboardDemo;
+		};
+		0908BA4D19BE321C00F9D5F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0908BA4819BE321C00F9D5F8 /* SWSoftKeyboard.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 093ADAA819BE2D44005AADB0;
+			remoteInfo = SWSoftKeyboard;
+		};
+		0908BA4F19BE321C00F9D5F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0908BA4819BE321C00F9D5F8 /* SWSoftKeyboard.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 093ADABF19BE2D44005AADB0;
+			remoteInfo = SWSoftKeyboardTests;
+		};
+		0908BA5119BE323100F9D5F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0908BA4819BE321C00F9D5F8 /* SWSoftKeyboard.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 093ADAA719BE2D44005AADB0;
+			remoteInfo = SWSoftKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0908BA2419BE320600F9D5F8 /* SWSoftKeyboardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWSoftKeyboardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0908BA2819BE320600F9D5F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0908BA2919BE320600F9D5F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0908BA2B19BE320600F9D5F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0908BA2C19BE320600F9D5F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0908BA2E19BE320600F9D5F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0908BA3119BE320600F9D5F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0908BA3719BE320600F9D5F8 /* SWSoftKeyboardDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWSoftKeyboardDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0908BA3C19BE320600F9D5F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0908BA3D19BE320600F9D5F8 /* SWSoftKeyboardDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWSoftKeyboardDemoTests.m; sourceTree = "<group>"; };
+		0908BA4819BE321C00F9D5F8 /* SWSoftKeyboard.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SWSoftKeyboard.xcodeproj; path = ../../SWSoftKeyboard.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0908BA2119BE320600F9D5F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0908BA5319BE323700F9D5F8 /* SWSoftKeyboard.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0908BA3419BE320600F9D5F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0908BA1B19BE320600F9D5F8 = {
+			isa = PBXGroup;
+			children = (
+				0908BA2619BE320600F9D5F8 /* SWSoftKeyboardDemo */,
+				0908BA3A19BE320600F9D5F8 /* SWSoftKeyboardDemoTests */,
+				0908BA2519BE320600F9D5F8 /* Products */,
+				0908BA4719BE321700F9D5F8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0908BA2519BE320600F9D5F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0908BA2419BE320600F9D5F8 /* SWSoftKeyboardDemo.app */,
+				0908BA3719BE320600F9D5F8 /* SWSoftKeyboardDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0908BA2619BE320600F9D5F8 /* SWSoftKeyboardDemo */ = {
+			isa = PBXGroup;
+			children = (
+				0908BA2B19BE320600F9D5F8 /* AppDelegate.h */,
+				0908BA2C19BE320600F9D5F8 /* AppDelegate.m */,
+				0908BA2E19BE320600F9D5F8 /* Images.xcassets */,
+				0908BA3019BE320600F9D5F8 /* MainMenu.xib */,
+				0908BA2719BE320600F9D5F8 /* Supporting Files */,
+			);
+			path = SWSoftKeyboardDemo;
+			sourceTree = "<group>";
+		};
+		0908BA2719BE320600F9D5F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0908BA2819BE320600F9D5F8 /* Info.plist */,
+				0908BA2919BE320600F9D5F8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0908BA3A19BE320600F9D5F8 /* SWSoftKeyboardDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				0908BA3D19BE320600F9D5F8 /* SWSoftKeyboardDemoTests.m */,
+				0908BA3B19BE320600F9D5F8 /* Supporting Files */,
+			);
+			path = SWSoftKeyboardDemoTests;
+			sourceTree = "<group>";
+		};
+		0908BA3B19BE320600F9D5F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0908BA3C19BE320600F9D5F8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0908BA4719BE321700F9D5F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0908BA4819BE321C00F9D5F8 /* SWSoftKeyboard.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0908BA4919BE321C00F9D5F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0908BA4E19BE321C00F9D5F8 /* SWSoftKeyboard.framework */,
+				0908BA5019BE321C00F9D5F8 /* SWSoftKeyboardTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0908BA2319BE320600F9D5F8 /* SWSoftKeyboardDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0908BA4119BE320600F9D5F8 /* Build configuration list for PBXNativeTarget "SWSoftKeyboardDemo" */;
+			buildPhases = (
+				0908BA2019BE320600F9D5F8 /* Sources */,
+				0908BA2119BE320600F9D5F8 /* Frameworks */,
+				0908BA2219BE320600F9D5F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0908BA5219BE323100F9D5F8 /* PBXTargetDependency */,
+			);
+			name = SWSoftKeyboardDemo;
+			productName = SWSoftKeyboardDemo;
+			productReference = 0908BA2419BE320600F9D5F8 /* SWSoftKeyboardDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0908BA3619BE320600F9D5F8 /* SWSoftKeyboardDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0908BA4419BE320600F9D5F8 /* Build configuration list for PBXNativeTarget "SWSoftKeyboardDemoTests" */;
+			buildPhases = (
+				0908BA3319BE320600F9D5F8 /* Sources */,
+				0908BA3419BE320600F9D5F8 /* Frameworks */,
+				0908BA3519BE320600F9D5F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0908BA3919BE320600F9D5F8 /* PBXTargetDependency */,
+			);
+			name = SWSoftKeyboardDemoTests;
+			productName = SWSoftKeyboardDemoTests;
+			productReference = 0908BA3719BE320600F9D5F8 /* SWSoftKeyboardDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0908BA1C19BE320600F9D5F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Spencer Williams";
+				TargetAttributes = {
+					0908BA2319BE320600F9D5F8 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					0908BA3619BE320600F9D5F8 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 0908BA2319BE320600F9D5F8;
+					};
+				};
+			};
+			buildConfigurationList = 0908BA1F19BE320600F9D5F8 /* Build configuration list for PBXProject "SWSoftKeyboardDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0908BA1B19BE320600F9D5F8;
+			productRefGroup = 0908BA2519BE320600F9D5F8 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0908BA4919BE321C00F9D5F8 /* Products */;
+					ProjectRef = 0908BA4819BE321C00F9D5F8 /* SWSoftKeyboard.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				0908BA2319BE320600F9D5F8 /* SWSoftKeyboardDemo */,
+				0908BA3619BE320600F9D5F8 /* SWSoftKeyboardDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0908BA4E19BE321C00F9D5F8 /* SWSoftKeyboard.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SWSoftKeyboard.framework;
+			remoteRef = 0908BA4D19BE321C00F9D5F8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0908BA5019BE321C00F9D5F8 /* SWSoftKeyboardTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SWSoftKeyboardTests.xctest;
+			remoteRef = 0908BA4F19BE321C00F9D5F8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0908BA2219BE320600F9D5F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0908BA2F19BE320600F9D5F8 /* Images.xcassets in Resources */,
+				0908BA3219BE320600F9D5F8 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0908BA3519BE320600F9D5F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0908BA2019BE320600F9D5F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0908BA2D19BE320600F9D5F8 /* AppDelegate.m in Sources */,
+				0908BA2A19BE320600F9D5F8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0908BA3319BE320600F9D5F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0908BA3E19BE320600F9D5F8 /* SWSoftKeyboardDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0908BA3919BE320600F9D5F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0908BA2319BE320600F9D5F8 /* SWSoftKeyboardDemo */;
+			targetProxy = 0908BA3819BE320600F9D5F8 /* PBXContainerItemProxy */;
+		};
+		0908BA5219BE323100F9D5F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SWSoftKeyboard;
+			targetProxy = 0908BA5119BE323100F9D5F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0908BA3019BE320600F9D5F8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0908BA3119BE320600F9D5F8 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0908BA3F19BE320600F9D5F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0908BA4019BE320600F9D5F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0908BA4219BE320600F9D5F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode6-Beta7.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"$(SRCROOT)/../../**",
+				);
+				INFOPLIST_FILE = SWSoftKeyboardDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0908BA4319BE320600F9D5F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode6-Beta7.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"$(SRCROOT)/../../**",
+				);
+				INFOPLIST_FILE = SWSoftKeyboardDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0908BA4519BE320600F9D5F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SWSoftKeyboardDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SWSoftKeyboardDemo.app/Contents/MacOS/SWSoftKeyboardDemo";
+			};
+			name = Debug;
+		};
+		0908BA4619BE320600F9D5F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SWSoftKeyboardDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SWSoftKeyboardDemo.app/Contents/MacOS/SWSoftKeyboardDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0908BA1F19BE320600F9D5F8 /* Build configuration list for PBXProject "SWSoftKeyboardDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0908BA3F19BE320600F9D5F8 /* Debug */,
+				0908BA4019BE320600F9D5F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0908BA4119BE320600F9D5F8 /* Build configuration list for PBXNativeTarget "SWSoftKeyboardDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0908BA4219BE320600F9D5F8 /* Debug */,
+				0908BA4319BE320600F9D5F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0908BA4419BE320600F9D5F8 /* Build configuration list for PBXNativeTarget "SWSoftKeyboardDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0908BA4519BE320600F9D5F8 /* Debug */,
+				0908BA4619BE320600F9D5F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0908BA1C19BE320600F9D5F8 /* Project object */;
+}
