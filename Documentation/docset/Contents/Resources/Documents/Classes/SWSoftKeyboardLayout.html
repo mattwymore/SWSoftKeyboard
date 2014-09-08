@@ -54,6 +54,8 @@
 	
 	<option value="//api/name/layoutStates">&nbsp;&nbsp;&nbsp;&nbsp;- layoutStates</option>
 	
+	<option value="//api/name/simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:">&nbsp;&nbsp;&nbsp;&nbsp;- simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:</option>
+	
 	
 	
 </select>
@@ -93,6 +95,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keysForState:">keysForState:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/layoutStates">layoutStates</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:">simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:</a></span></li>
 	
 </ul></li>
 
@@ -162,6 +166,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/layoutStates">&ndash;&nbsp;layoutStates</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:">&ndash;&nbsp;simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:</a></code>
 	</span>
 	
 	
@@ -256,11 +266,6 @@
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Assumes two layout states: 0=shift key unpressed (unstuck), 1=shift key pressed (stuck).</p>
-	</div>
 	
 	
 	
@@ -364,6 +369,69 @@
 		<p>Like <code>keys</code>, states should be defined in subclasses of this class.
 Keyboards are initialized with a layout state of 0.
 State descriptions may be handled internally to subclasses of this class.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SWSoftKeyboardLayout.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:" title="simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:"></a>
+	<h3 class="subsubtitle method-title">simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an array of SWSoftKeyboardKeys based on an array of NSStrings.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)simpleKeysFromKeyboardShiftUpCharacters:(NSArray *)<em>keyboardShiftUpCharacters</em> keyboardShiftDownCharacters:(NSArray *)<em>keyboardShiftDownCharacters</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>keyboardShiftUpCharacters</em></dt>
+			<dd><p>An array of characters corresponding to the &ldquo;shift key up (unstuck)&rdquo; layout state</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>keyboardShiftDownCharacters</em></dt>
+			<dd><p>An array of characters corresponding to the &ldquo;shift key down (stuck)&rdquo; layout state</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An array of SWSoftKeyboardKeys</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Assumes two layout states: 0=shift key unpressed (unstuck), 1=shift key pressed (stuck).
+Key values will be identical to key labels.
+Key values and labels will not change between key sticky states.</p>
 	</div>
 	
 	

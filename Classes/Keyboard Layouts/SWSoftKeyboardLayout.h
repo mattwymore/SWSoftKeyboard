@@ -38,14 +38,28 @@
  Assumes two layout states: 0=shift key unpressed (unstuck), 1=shift key pressed (stuck).  
  Key values will be identical to key labels.
  Key values and labels will not change between key sticky states.
+ @param keyboardShiftUpCharacters   An array of characters corresponding to the "shift key up (unstuck)" layout state
+ @param keyboardShiftDownCharacters An array of characters corresponding to the "shift key down (stuck)" layout state
+ @return An array of SWSoftKeyboardKeys
  */
-- (NSArray *)simpleKeysFromKeyboardShiftDownCharacters:(NSArray *)keyboardShiftDownCharacters
-                             keyboardShiftUpCharacters:(NSArray *)keyboardShiftUpCharacters;
+- (NSArray *)simpleKeysFromKeyboardShiftUpCharacters:(NSArray *)keyboardShiftUpCharacters
+                         keyboardShiftDownCharacters:(NSArray *)keyboardShiftDownCharacters;
 /**
  Returns common alphabet keys, in QWERTY order.
  
-
  @return Common alphabet keys in QWERTY order.
  */
 - (NSArray *)commonAlphabetKeys;
+/**
+ Returns some basic control keys
+ 
+ @param hasFn   Whether or not to include a fn ("function") key
+ @param hasControl  Whether or not to include a "control" key
+ @param hasAlt  Whether or not to include an "alt" key
+ @param hasShift    Whether or not to include a "shift" key
+ @param hasDone     Whether or not to include a "done" key
+ @param hasBackspace    Whether or not to include a "delete" key
+ @return An array of control keys.
+ */
+- (NSArray *)controlKeysWithFn:(BOOL)hasFn control:(BOOL)hasControl alt:(BOOL)hasAlt shift:(BOOL)hasShift command:(BOOL)hasCommand done:(BOOL)hasDone backspace:(BOOL)hasBackspace;
 @end

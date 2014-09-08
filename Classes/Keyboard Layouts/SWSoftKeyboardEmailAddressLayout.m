@@ -16,8 +16,12 @@
     NSMutableArray *keysArray = [NSMutableArray new];
     
     NSArray *alphabetKeys = [self commonAlphabetKeys];
-    // update frame data for all keys
-    // TODO: incomplete
+    NSArray *numberKeys = [self simpleKeysFromKeyboardShiftUpCharacters:@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"0"]
+                                            keyboardShiftDownCharacters:@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"0"]];
+    NSArray *punctuationKeys = [self simpleKeysFromKeyboardShiftUpCharacters:
+                                                 keyboardShiftDownCharacters:];
+    NSArray *controlKeys = [self controlKeysWithFn:NO control:NO alt:NO shift:YES command:NO done:YES delete:YES];
+    // TODO: update frame data for all keys
     return keysArray;
 }
 - (int)layoutStates

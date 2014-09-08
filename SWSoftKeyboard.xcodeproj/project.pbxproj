@@ -271,7 +271,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/appledoc \\\n--project-name SWSoftKeyboard \\\n--project-company Spencer\\ Williams \\\n--company-id com.spilliams \\\n--logformat xcode \\\n--verbose 6 \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--ignore .m \\\n--ignore \"${PROJECT_DIR}/Documentation\" \\\n--output \"${PROJECT_DIR}/Documentation\" \\\n\"${PROJECT_DIR}\"";
+			shellScript = "/usr/local/bin/appledoc \\\n--project-name SWSoftKeyboard \\\n--project-company Spencer\\ Williams \\\n--company-id com.spilliams \\\n--logformat xcode \\\n--verbose 6 \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--ignore .m \\\n--ignore \"${PROJECT_DIR}/Documentation\" \\\n--ignore \"${PROJECT_DIR}/Demo\" \\\n--output \"${PROJECT_DIR}/Documentation\" \\\n\"${PROJECT_DIR}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 

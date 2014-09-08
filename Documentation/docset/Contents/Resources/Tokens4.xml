@@ -78,6 +78,26 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardLayout/simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:</TokenIdentifier>
+			<Abstract type="html">Returns an array of SWSoftKeyboardKeys based on an array of NSStrings.</Abstract>
+			<DeclaredIn>SWSoftKeyboardLayout.h</DeclaredIn>
+			
+			<Declaration>- (NSArray *)simpleKeysFromKeyboardShiftUpCharacters:(NSArray *)keyboardShiftUpCharacters keyboardShiftDownCharacters:(NSArray *)keyboardShiftDownCharacters</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>keyboardShiftUpCharacters</Name>
+					<Abstract type="html">An array of characters corresponding to the &quot;shift key up (unstuck)&quot; layout state</Abstract>
+				</Parameter><Parameter>
+					<Name>keyboardShiftDownCharacters</Name>
+					<Abstract type="html">An array of characters corresponding to the &quot;shift key down (stuck)&quot; layout state</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An array of SWSoftKeyboardKeys</Abstract></ReturnValue>
+			<Anchor>//api/name/simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardLayout/commonAlphabetKeys</TokenIdentifier>
 			<Abstract type="html">Returns common alphabet keys, in QWERTY order.</Abstract>
 			<DeclaredIn>SWSoftKeyboardLayout.h</DeclaredIn>

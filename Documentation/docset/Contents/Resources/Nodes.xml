@@ -15,7 +15,6 @@
 						<NodeRef refid="2"/>
 						<NodeRef refid="3"/>
 						<NodeRef refid="4"/>
-						<NodeRef refid="5"/>
 						
 					</Subnodes>
 				</Node>
@@ -26,8 +25,8 @@
 					<Name>Protocols</Name>
 					<Path>index.html</Path>
 					<Subnodes>
+						<NodeRef refid="5"/>
 						<NodeRef refid="6"/>
-						<NodeRef refid="7"/>
 						
 					</Subnodes>
 				</Node>
@@ -143,14 +142,9 @@
             </Subnodes>
             
         </Node>
-		<Node id="5" type="file" documentType="reference">
-            <Name>SWSoftKeyboardViewController</Name>
-            <Path>Classes/SWSoftKeyboardViewController.html</Path>
-            
-        </Node>
 		
 		
-        <Node id="6" type="file" documentType="reference">
+        <Node id="5" type="file" documentType="reference">
             <Name>SWKeyDelegate</Name>
             <Path>Protocols/SWKeyDelegate.html</Path>
             
@@ -177,7 +171,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="7" type="file" documentType="reference">
+		<Node id="6" type="file" documentType="reference">
             <Name>SWSoftKeyboardDelegate</Name>
             <Path>Protocols/SWSoftKeyboardDelegate.html</Path>
             

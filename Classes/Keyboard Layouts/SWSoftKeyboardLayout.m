@@ -20,14 +20,13 @@
 {
     return 1;
 }
-- (NSArray *)commonAlphabetKeys
+- (NSArray *)simpleKeysFromKeyboardShiftUpCharacters:(NSArray *)keyboardShiftUpCharacters
+                         keyboardShiftDownCharacters:(NSArray *)keyboardShiftDownCharacters
 {
     NSMutableArray *keys = [NSMutableArray new];
-    NSArray *lowercase = @[@"q",@"w",@"e",@"r",@"t",@"y",@"u",@"i",@"o",@"p",@"a",@"s",@"d",@"f",@"g",@"h",@"j",@"k",@"l",@"z",@"x",@"c",@"v",@"b",@"n",@"m"];
-    NSArray *uppercase = @[@"Q",@"W",@"E",@"R",@"T",@"Y",@"U",@"I",@"O",@"P",@"A",@"S",@"D",@"F",@"G",@"H",@"J",@"K",@"L",@"Z",@"X",@"C",@"V",@"B",@"N",@"M"];
-    for (int i=0; i<lowercase.count; i++) {
-        NSString *lowerLetter = [lowercase objectAtIndex:i];
-        NSString *upperLetter = [uppercase objectAtIndex:i];
+    for (int i=0; i<keyboardShiftUpCharacters.count; i++) {
+        NSString *lowerLetter = [keyboardShiftUpCharacters objectAtIndex:i];
+        NSString *upperLetter = [keyboardShiftDownCharacters objectAtIndex:i];
         // assumes keyboard layout states of
         // 0 = shift key is unpressed (unstuck)
         // 1 = shift key is pressed (stuck)
@@ -43,6 +42,14 @@
         [keys addObject:key];
     }
     return keys;
+
+}
+- (NSArray *)commonAlphabetKeys
+{
+    NSMutableArray *keys = [NSMutableArray new];
+    NSArray *lowercase = @[@"q",@"w",@"e",@"r",@"t",@"y",@"u",@"i",@"o",@"p",@"a",@"s",@"d",@"f",@"g",@"h",@"j",@"k",@"l",@"z",@"x",@"c",@"v",@"b",@"n",@"m"];
+    NSArray *uppercase = @[@"Q",@"W",@"E",@"R",@"T",@"Y",@"U",@"I",@"O",@"P",@"A",@"S",@"D",@"F",@"G",@"H",@"J",@"K",@"L",@"Z",@"X",@"C",@"V",@"B",@"N",@"M"];
+    return [self simpleKeysFromKeyboardShiftUpCharacters:lowercase keyboardShiftDownCharacters:uppercase];
 }
 
 @end
