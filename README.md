@@ -12,8 +12,18 @@ Instead, this keyboard updates its given set of NSTextFields with new values dir
 Included in this codebase:
 
 - "Classes" contains the framework implementing a soft keyboard, as well as an "email address" keyboard layout (see below)
-- "Demo" contains a demonstration of the framework
+- "Demos" contains demonstrations of the framework
 - "Documentation" contains compiled documentation via [appledoc](http://gentlebytes.com/appledoc/)
+
+##Installation
+
+For now this library is only installable statically.
+
+1. Download this repository and place it in a sibdirectory of your project.
+1. Drag `SWSoftKeyboard.xcodeproj` into your file navigator in Xcode
+1. in your app target's Build Phases tab, in the Target Dependencies section click the "+" button to add a dependency. Select SWSoftKeyboard
+1. in your app target's Build Phases tab, in the Link Binary With Libraries section click the "+" button to add a library. Select SWSoftKeyboard.framework
+1. in your app's code, you can now `#import <SWSoftKeyboard/SWSoftKeyboard.h>`
 
 ##On Keyboard Layouts
 

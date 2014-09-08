@@ -123,7 +123,12 @@
 			children = (
 				093ADAB819BE2D44005AADB0 /* SWSoftKeyboard.h */,
 				093ADAB919BE2D44005AADB0 /* SWSoftKeyboard.m */,
-				0967783E19BE2E0400220916 /* Classes */,
+				0967784619BE2E0400220916 /* SWSoftKeyboardKey.h */,
+				0967784719BE2E0400220916 /* SWSoftKeyboardKey.m */,
+				0967784019BE2E0400220916 /* SWSoftKeyboardEmailAddressLayout.h */,
+				0967784119BE2E0400220916 /* SWSoftKeyboardEmailAddressLayout.m */,
+				0967784219BE2E0400220916 /* SWSoftKeyboardLayout.h */,
+				0967784319BE2E0400220916 /* SWSoftKeyboardLayout.m */,
 				093ADAB219BE2D44005AADB0 /* Supporting Files */,
 			);
 			path = SWSoftKeyboard;
@@ -155,27 +160,6 @@
 				093ADAC919BE2D44005AADB0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0967783E19BE2E0400220916 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				0967783F19BE2E0400220916 /* Keyboard Layouts */,
-				0967784619BE2E0400220916 /* SWSoftKeyboardKey.h */,
-				0967784719BE2E0400220916 /* SWSoftKeyboardKey.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		0967783F19BE2E0400220916 /* Keyboard Layouts */ = {
-			isa = PBXGroup;
-			children = (
-				0967784019BE2E0400220916 /* SWSoftKeyboardEmailAddressLayout.h */,
-				0967784119BE2E0400220916 /* SWSoftKeyboardEmailAddressLayout.m */,
-				0967784219BE2E0400220916 /* SWSoftKeyboardLayout.h */,
-				0967784319BE2E0400220916 /* SWSoftKeyboardLayout.m */,
-			);
-			path = "Keyboard Layouts";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

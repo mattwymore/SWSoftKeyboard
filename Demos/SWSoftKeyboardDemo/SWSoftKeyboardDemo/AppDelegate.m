@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 #import <SWSoftKeyboard/SWSoftKeyboard.h>
-#import <SWSoftKeyboard/Classes/Keyboard Layouts/SWSoftKeyboardEmailAddressLayout.h>
+#import <SWSoftKeyboard/SWSoftKeyboardEmailAddressLayout.h>
 #import <QuartzCore/QuartzCore.h>
 
 @interface AppDelegate ()
@@ -23,7 +23,8 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    self.keyboard = [[SWSoftKeyboard alloc] initWithLayout:[SWSoftKeyboardEmailAddressLayout new]];
+    self.keyboard = [[SWSoftKeyboard alloc] initWithLayout:[SWSoftKeyboardEmailAddressLayout new]]
+    ;
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
