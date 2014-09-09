@@ -50,6 +50,8 @@
 	
 	<option value="//api/name/commonAlphabetKeys">&nbsp;&nbsp;&nbsp;&nbsp;- commonAlphabetKeys</option>
 	
+	<option value="//api/name/controlKeysWithFn:control:alt:shift:command:done:backspace:">&nbsp;&nbsp;&nbsp;&nbsp;- controlKeysWithFn:control:alt:shift:command:done:backspace:</option>
+	
 	<option value="//api/name/keysForState:">&nbsp;&nbsp;&nbsp;&nbsp;- keysForState:</option>
 	
 	<option value="//api/name/layoutStates">&nbsp;&nbsp;&nbsp;&nbsp;- layoutStates</option>
@@ -91,6 +93,8 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/commonAlphabetKeys">commonAlphabetKeys</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/controlKeysWithFn:control:alt:shift:command:done:backspace:">controlKeysWithFn:control:alt:shift:command:done:backspace:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keysForState:">keysForState:</a></span></li>
 	
@@ -181,6 +185,12 @@
 	</span>
 	
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/controlKeysWithFn:control:alt:shift:command:done:backspace:">&ndash;&nbsp;controlKeysWithFn:control:alt:shift:command:done:backspace:</a></code>
+	</span>
+	
+	
 </li>
 						</ul>
 						
@@ -261,6 +271,82 @@
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>Common alphabet keys in QWERTY order.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SWSoftKeyboardLayout.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/controlKeysWithFn:control:alt:shift:command:done:backspace:" title="controlKeysWithFn:control:alt:shift:command:done:backspace:"></a>
+	<h3 class="subsubtitle method-title">controlKeysWithFn:control:alt:shift:command:done:backspace:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns some basic control keys</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)controlKeysWithFn:(BOOL)<em>hasFn</em> control:(BOOL)<em>hasControl</em> alt:(BOOL)<em>hasAlt</em> shift:(BOOL)<em>hasShift</em> command:(BOOL)<em>hasCommand</em> done:(BOOL)<em>hasDone</em> backspace:(BOOL)<em>hasBackspace</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>hasFn</em></dt>
+			<dd><p>Whether or not to include a fn (&ldquo;function&rdquo;) key</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>hasControl</em></dt>
+			<dd><p>Whether or not to include a &ldquo;control&rdquo; key</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>hasAlt</em></dt>
+			<dd><p>Whether or not to include an &ldquo;alt&rdquo; key</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>hasShift</em></dt>
+			<dd><p>Whether or not to include a &ldquo;shift&rdquo; key</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>hasDone</em></dt>
+			<dd><p>Whether or not to include a &ldquo;done&rdquo; key</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>hasBackspace</em></dt>
+			<dd><p>Whether or not to include a &ldquo;delete&rdquo; key</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An array of control keys.</p>
 	</div>
 	
 	
@@ -366,9 +452,18 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Like <code>keys</code>, states should be defined in subclasses of this class.
+		<p>Like <code>keys</code>, this should be defined in subclasses of this class.
 Keyboards are initialized with a layout state of 0.
 State descriptions may be handled internally to subclasses of this class.</p>
+
+<p>Note that the layout should probably only make one of each kind of key. That is,
+there should only be one &lsquo;Q&rsquo; key between the &ldquo;keyboard shift down&rdquo; and &ldquo;keyboard shift up&rdquo;
+states. Also note that the Q key returned by this method may have a dirty label/value,
+So the keyboard should <strong>also</strong> update its individual keys.</p>
+
+<p>I guess you can think of this method as &ldquo;what&rsquo;s the forest?&rdquo; and when the keyboard has
+the &ldquo;forest&rdquo; then it still has to update each &ldquo;tree&rdquo;. Perhaps not the most efficient,
+but I&rsquo;m on a timeline here folks.</p>
 	</div>
 	
 	
@@ -466,7 +561,7 @@ Key values and labels will not change between key sticky states.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Spencer Williams. All rights reserved. (Last updated: 2014-09-05)</span><br />
+						<p><span class="copyright">&copy; 2014 Spencer Williams. All rights reserved. (Last updated: 2014-09-09)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

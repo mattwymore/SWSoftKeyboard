@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class SWSoftKeyboardKey;
+@class SWSoftKeyboardKeyCell;
 
 typedef enum {
     SWStickyKeyStateUp,
@@ -25,12 +25,12 @@ typedef enum {
  @param key     The key.
  @param state   The sticky state the key is in.
  */
-- (void)softKeyboardKey:(SWSoftKeyboardKey *)key stickiedInState:(SWStickyKeyState)state;
+- (void)softKeyboardKey:(SWSoftKeyboardKeyCell *)key stickiedInState:(SWStickyKeyState)state;
 /**
  Notifies the delegate that the key has been pressed
  @param key The key
  */
-- (void)softKeyboardKeyPressed:(SWSoftKeyboardKey *)key;
+- (void)softKeyboardKeyPressed:(SWSoftKeyboardKeyCell *)key;
 @end
 
 
@@ -43,7 +43,7 @@ typedef enum {
  state-related variables (`isSticky`, `stateLabels`, `stateValues`) as well as positioning
  values (`frame`).
  */
-@interface SWSoftKeyboardKey : NSActionCell
+@interface SWSoftKeyboardKeyCell : NSActionCell
 /// The delegate to receive messages about this (sticky) key
 @property (nonatomic, weak) id<SWKeyDelegate>keyDelegate;
 /// What "sticky state" the key is in
@@ -89,4 +89,6 @@ typedef enum {
  @return the key value
  */
 - (NSString *)valueForKeyboardState:(int)keyboardState;
+
+- (void)updateForKeyboardState:(int)keyboardState;
 @end

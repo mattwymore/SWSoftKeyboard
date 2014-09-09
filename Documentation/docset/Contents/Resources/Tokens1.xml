@@ -121,6 +121,42 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboard/setKeys:</TokenIdentifier>
+			<Abstract type="html">The keyboard&apos;s keys</Abstract>
+			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *keys</Declaration>
+			
+			
+			<Anchor>//api/name/keys</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboard/keys</TokenIdentifier>
+			<Abstract type="html">The keyboard&apos;s keys</Abstract>
+			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *keys</Declaration>
+			
+			
+			<Anchor>//api/name/keys</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboard/keys</TokenIdentifier>
+			<Abstract type="html">The keyboard&apos;s keys</Abstract>
+			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *keys</Declaration>
+			
+			
+			<Anchor>//api/name/keys</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboard/initWithLayout:</TokenIdentifier>
 			<Abstract type="html">Initializes a new keyboard with a particular layout</Abstract>
 			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>

@@ -25,9 +25,19 @@
 /**
  The number of possible states of this layout.
  
- Like `keys`, states should be defined in subclasses of this class.  
- Keyboards are initialized with a layout state of 0.  
+ Like `keys`, this should be defined in subclasses of this class.
+ Keyboards are initialized with a layout state of 0.
  State descriptions may be handled internally to subclasses of this class.
+ 
+ Note that the layout should probably only make one of each kind of key. That is,
+ there should only be one 'Q' key between the "keyboard shift down" and "keyboard shift up"
+ states. Also note that the Q key returned by this method may have a dirty label/value,
+ So the keyboard should **also** update its individual keys.
+ 
+ I guess you can think of this method as "what's the forest?" and when the keyboard has
+ the "forest" then it still has to update each "tree". Perhaps not the most efficient,
+ but I'm on a timeline here folks.
+ 
  @return The number of possible states of thsi layout.
  */
 - (int)layoutStates;

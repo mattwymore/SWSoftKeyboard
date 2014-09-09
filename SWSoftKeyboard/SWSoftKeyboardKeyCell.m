@@ -6,13 +6,13 @@
 //  This is free and unencumbered software released into the public domain.
 //
 
-#import "SWSoftKeyboardKey.h"
+#import "SWSoftKeyboardKeyCell.h"
 
-@interface SWSoftKeyboardKey ()
+@interface SWSoftKeyboardKeyCell ()
 @property (nonatomic, assign) NSRect frame;
 @end
 
-@implementation SWSoftKeyboardKey
+@implementation SWSoftKeyboardKeyCell
 
 - (id)initWithFrame:(NSRect)frame
         stateLabels:(NSDictionary *)stateLabels
@@ -60,5 +60,11 @@
         return [stickyStateValues objectForKey:[NSNumber numberWithInt:keyboardState]];
     }
     return @"";
+}
+
+- (void)updateForKeyboardState:(int)keyboardState
+{
+    // TODO: update the cell's view according to the given keyboard state and the key's sitcky state
+    
 }
 @end

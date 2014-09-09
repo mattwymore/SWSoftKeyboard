@@ -7,7 +7,7 @@
 //
 
 #import "SWSoftKeyboardLayout.h"
-#import "SWSoftKeyboardKey.h"
+#import "SWSoftKeyboardKeyCell.h"
 
 @implementation SWSoftKeyboardLayout
 
@@ -38,7 +38,7 @@
                                      [stuckLabels copy],[NSNumber numberWithInt:SWStickyKeyStateUp],
                                      [stuckLabels copy],[NSNumber numberWithInt:SWStickyKeyStateDown],nil];
         
-        SWSoftKeyboardKey *key = [[SWSoftKeyboardKey alloc] initWithFrame:NSZeroRect stateLabels:stateLabels stateValues:[stateLabels copy] sticky:NO keyDelegate:self.keyDelegate];
+        SWSoftKeyboardKeyCell *key = [[SWSoftKeyboardKeyCell alloc] initWithFrame:NSZeroRect stateLabels:stateLabels stateValues:[stateLabels copy] sticky:NO keyDelegate:self.keyDelegate];
         [keys addObject:key];
     }
     return keys;

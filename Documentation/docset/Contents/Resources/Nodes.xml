@@ -77,23 +77,23 @@
             
         </Node>
 		<Node id="3" type="file" documentType="reference">
-            <Name>SWSoftKeyboardKey</Name>
-            <Path>Classes/SWSoftKeyboardKey.html</Path>
+            <Name>SWSoftKeyboardKeyCell</Name>
+            <Path>Classes/SWSoftKeyboardKeyCell.html</Path>
             
                 <Subnodes>
                 <Node type="section">
-                    <Path>Classes/SWSoftKeyboardKey.html</Path>
+                    <Path>Classes/SWSoftKeyboardKeyCell.html</Path>
                     <Name>Overview</Name>
                     <Anchor>overview</Anchor>
                 </Node>
                 <Node type="section">
-                    <Path>Classes/SWSoftKeyboardKey.html</Path>
+                    <Path>Classes/SWSoftKeyboardKeyCell.html</Path>
                     <Name>Tasks</Name>
                     <Anchor>tasks</Anchor>
                 </Node>
                 
                 <Node type="section">
-                    <Path>Classes/SWSoftKeyboardKey.html</Path>
+                    <Path>Classes/SWSoftKeyboardKeyCell.html</Path>
                     <Name>Properties</Name>
                     <Anchor>properties</Anchor>
                 </Node>
@@ -101,7 +101,7 @@
                 
                 
                 <Node type="section">
-                    <Path>Classes/SWSoftKeyboardKey.html</Path>
+                    <Path>Classes/SWSoftKeyboardKeyCell.html</Path>
                     <Name>Instance Methods</Name>
                     <Anchor>instance_methods</Anchor>
                 </Node>

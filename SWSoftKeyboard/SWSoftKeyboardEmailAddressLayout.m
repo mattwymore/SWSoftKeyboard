@@ -8,9 +8,26 @@
 
 #import "SWSoftKeyboardEmailAddressLayout.h"
 
+@interface SWSoftKeyboardEmailAddressLayout ()
+@property (nonatomic, strong) NSMutableDictionary *keysForStates;
+@end
+
 @implementation SWSoftKeyboardEmailAddressLayout
+
+- (instancetype)init
+{
+    if (self = [super init]) {
+        self.keysForStates = [NSMutableDictionary new];
+    }
+    return self;
+}
 - (NSArray *)keysForState:(int)layoutState
 {
+    NSArray *keys = [self.keysForStates objectForKey:[NSNumber numberWithInt:layoutState]];
+    if (keys != nil) {
+        return keys;
+    }
+    
     // this layout actually doesn't care about layout state
     
     NSMutableArray *keysArray = [NSMutableArray new];
@@ -22,7 +39,16 @@
     NSArray *punctuationKeys = [self simpleKeysFromKeyboardShiftUpCharacters:punctuationLetters
                                                  keyboardShiftDownCharacters:punctuationLetters];
     NSArray *controlKeys = [self controlKeysWithFn:NO control:NO alt:NO shift:YES command:NO done:YES backspace:NO];
+    
     // TODO: update frame data for all keys
+    
+    [keysArray addObjectsFromArray:alphabetKeys];
+    [keysArray addObjectsFromArray:numberKeys];
+    [keysArray addObjectsFromArray:punctuationKeys];
+    [keysArray addObjectsFromArray:controlKeys];
+    
+    [self.keysForStates setObject:keysArray forKey:[NSNumber numberWithInt:layoutState]];
+    
     return keysArray;
 }
 - (int)layoutStates

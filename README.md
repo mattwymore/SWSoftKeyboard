@@ -25,6 +25,12 @@ For now this library is only installable statically.
 1. in your app target's Build Phases tab, in the Link Binary With Libraries section click the "+" button to add a library. Select SWSoftKeyboard.framework
 1. in your app's code, you can now `#import <SWSoftKeyboard/SWSoftKeyboard.h>`
 
+##Usage
+
+The demo app SWSoftKeyboardDemo shows how to use the soft keyboard in a Mac 10.9 app. The AppDelegate imports `<SWSoftKeyboard/SWSoftKeyboard.h>` and `<SWSoftKeyboard/SWSoftKeyboardEmailAddressLayout.h>`. Then, in `-applicationDidFinishLaunching:` we initialize the keyboard with an email address layout. The AppDelegate also registers as an `NSTextFieldDelegate`, so that it can receive notifications from its text field in MainMenu.xib.
+
+When the text view begins editing, the AppDelegate uses some fancy animation to present the keyboard control.
+
 ##On Keyboard Layouts
 
 Since this product is intended for touch screens, I started the process by emulating iOS's on-screen keyboards. These layouts have a state that determines what keys are presented, where those keys present within the keyboard, what labels those keys show, and what values those keys send.

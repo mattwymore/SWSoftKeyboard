@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/SWSoftKeyboardKey.html">
+	<File path="Classes/SWSoftKeyboardKeyCell.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/SWSoftKeyboardKey</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cl/SWSoftKeyboardKeyCell</TokenIdentifier>
 			<Abstract type="html">Instances of SWSoftKeyboardKey represent individual keyboard keys. They contain certain
 state-related variables (isSticky, stateLabels, stateValues as well as positioning
 values (frame).</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
             
 			
 			<NodeRef refid="3"/>
@@ -15,9 +15,9 @@ values (frame).</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/setKeyDelegate:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKeyCell/setKeyDelegate:</TokenIdentifier>
 			<Abstract type="html">The delegate to receive messages about this (sticky) key</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, weak) id&lt;SWKeyDelegate&gt; keyDelegate</Declaration>
 			
@@ -27,9 +27,9 @@ values (frame).</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/keyDelegate</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKeyCell/keyDelegate</TokenIdentifier>
 			<Abstract type="html">The delegate to receive messages about this (sticky) key</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, weak) id&lt;SWKeyDelegate&gt; keyDelegate</Declaration>
 			
@@ -39,9 +39,9 @@ values (frame).</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKey/keyDelegate</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKeyCell/keyDelegate</TokenIdentifier>
 			<Abstract type="html">The delegate to receive messages about this (sticky) key</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, weak) id&lt;SWKeyDelegate&gt; keyDelegate</Declaration>
 			
@@ -51,9 +51,9 @@ values (frame).</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/setStickyState:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKeyCell/setStickyState:</TokenIdentifier>
 			<Abstract type="html">What &quot;sticky state&quot; the key is in</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) SWStickyKeyState stickyState</Declaration>
 			
@@ -63,9 +63,9 @@ values (frame).</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/stickyState</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKeyCell/stickyState</TokenIdentifier>
 			<Abstract type="html">What &quot;sticky state&quot; the key is in</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) SWStickyKeyState stickyState</Declaration>
 			
@@ -75,9 +75,9 @@ values (frame).</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKey/stickyState</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKeyCell/stickyState</TokenIdentifier>
 			<Abstract type="html">What &quot;sticky state&quot; the key is in</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) SWStickyKeyState stickyState</Declaration>
 			
@@ -87,9 +87,9 @@ values (frame).</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/setIsSticky:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKeyCell/setIsSticky:</TokenIdentifier>
 			<Abstract type="html">Whether or not this key is sticky</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) BOOL isSticky</Declaration>
 			
@@ -99,9 +99,9 @@ values (frame).</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/isSticky</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKeyCell/isSticky</TokenIdentifier>
 			<Abstract type="html">Whether or not this key is sticky</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) BOOL isSticky</Declaration>
 			
@@ -111,9 +111,9 @@ values (frame).</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKey/isSticky</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKeyCell/isSticky</TokenIdentifier>
 			<Abstract type="html">Whether or not this key is sticky</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) BOOL isSticky</Declaration>
 			
@@ -123,9 +123,9 @@ values (frame).</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/setStateLabels:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKeyCell/setStateLabels:</TokenIdentifier>
 			<Abstract type="html">The labels this key uses for certain keyboard/sticky states.</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) NSDictionary *stateLabels</Declaration>
 			
@@ -135,9 +135,9 @@ values (frame).</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/stateLabels</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKeyCell/stateLabels</TokenIdentifier>
 			<Abstract type="html">The labels this key uses for certain keyboard/sticky states.</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) NSDictionary *stateLabels</Declaration>
 			
@@ -147,9 +147,9 @@ values (frame).</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKey/stateLabels</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKeyCell/stateLabels</TokenIdentifier>
 			<Abstract type="html">The labels this key uses for certain keyboard/sticky states.</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) NSDictionary *stateLabels</Declaration>
 			
@@ -159,12 +159,12 @@ values (frame).</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/setStateValues:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKeyCell/setStateValues:</TokenIdentifier>
 			<Abstract type="html">The values this key sends in certain keyboard/sticky states</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKey/stateLabels</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKeyCell/stateLabels</TokenIdentifier>
 		
 	</RelatedTokens>
 	
@@ -176,12 +176,12 @@ values (frame).</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/stateValues</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKeyCell/stateValues</TokenIdentifier>
 			<Abstract type="html">The values this key sends in certain keyboard/sticky states</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKey/stateLabels</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKeyCell/stateLabels</TokenIdentifier>
 		
 	</RelatedTokens>
 	
@@ -193,12 +193,12 @@ values (frame).</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKey/stateValues</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKeyCell/stateValues</TokenIdentifier>
 			<Abstract type="html">The values this key sends in certain keyboard/sticky states</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKey/stateLabels</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKeyCell/stateLabels</TokenIdentifier>
 		
 	</RelatedTokens>
 	
@@ -210,9 +210,9 @@ values (frame).</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/initWithFrame:stateLabels:stateValues:sticky:keyDelegate:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKeyCell/initWithFrame:stateLabels:stateValues:sticky:keyDelegate:</TokenIdentifier>
 			<Abstract type="html">Initializes a new key with particular attributes</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
 			
 			<Declaration>- (id)initWithFrame:(NSRect)frame stateLabels:(NSDictionary *)stateLabels stateValues:(NSDictionary *)stateValues sticky:(BOOL)isSticky keyDelegate:(id&lt;SWKeyDelegate&gt;)keyDelegate</Declaration>
 			<Parameters>
@@ -239,12 +239,12 @@ values (frame).</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/labelForKeyboardState:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKeyCell/labelForKeyboardState:</TokenIdentifier>
 			<Abstract type="html">Returns the label for a particular keyboard state, taking into account the key&apos;s sticky state</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKey/stateLabels</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKeyCell/stateLabels</TokenIdentifier>
 		
 	</RelatedTokens>
 	
@@ -261,12 +261,12 @@ values (frame).</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKey/valueForKeyboardState:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKeyCell/valueForKeyboardState:</TokenIdentifier>
 			<Abstract type="html">Returns the key&apos;s value for a particular keyboard state and key sticky state.</Abstract>
-			<DeclaredIn>SWSoftKeyboardKey.h</DeclaredIn>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKey/stateLabels</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/instp/SWSoftKeyboardKeyCell/stateLabels</TokenIdentifier>
 		
 	</RelatedTokens>
 	
@@ -279,6 +279,18 @@ values (frame).</Abstract>
 			</Parameters>
 			<ReturnValue><Abstract type="html">the key value</Abstract></ReturnValue>
 			<Anchor>//api/name/valueForKeyboardState:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardKeyCell/updateForKeyboardState:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+			
+			<Declaration>- (void)updateForKeyboardState:(int)keyboardState</Declaration>
+			
+			
+			<Anchor>//api/name/updateForKeyboardState:</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		

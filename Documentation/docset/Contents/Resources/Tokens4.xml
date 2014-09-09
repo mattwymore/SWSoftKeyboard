@@ -109,6 +109,38 @@
             <NodeRef refid="4"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SWSoftKeyboardLayout/controlKeysWithFn:control:alt:shift:command:done:backspace:</TokenIdentifier>
+			<Abstract type="html">Returns some basic control keys</Abstract>
+			<DeclaredIn>SWSoftKeyboardLayout.h</DeclaredIn>
+			
+			<Declaration>- (NSArray *)controlKeysWithFn:(BOOL)hasFn control:(BOOL)hasControl alt:(BOOL)hasAlt shift:(BOOL)hasShift command:(BOOL)hasCommand done:(BOOL)hasDone backspace:(BOOL)hasBackspace</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>hasFn</Name>
+					<Abstract type="html">Whether or not to include a fn (&quot;function&quot;) key</Abstract>
+				</Parameter><Parameter>
+					<Name>hasControl</Name>
+					<Abstract type="html">Whether or not to include a &quot;control&quot; key</Abstract>
+				</Parameter><Parameter>
+					<Name>hasAlt</Name>
+					<Abstract type="html">Whether or not to include an &quot;alt&quot; key</Abstract>
+				</Parameter><Parameter>
+					<Name>hasShift</Name>
+					<Abstract type="html">Whether or not to include a &quot;shift&quot; key</Abstract>
+				</Parameter><Parameter>
+					<Name>hasDone</Name>
+					<Abstract type="html">Whether or not to include a &quot;done&quot; key</Abstract>
+				</Parameter><Parameter>
+					<Name>hasBackspace</Name>
+					<Abstract type="html">Whether or not to include a &quot;delete&quot; key</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An array of control keys.</Abstract></ReturnValue>
+			<Anchor>//api/name/controlKeysWithFn:control:alt:shift:command:done:backspace:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
         
         
 	</File>
