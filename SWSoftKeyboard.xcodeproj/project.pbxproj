@@ -296,7 +296,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/appledoc \\\n    --project-name SWSoftKeyboard \\\n    --project-company Spencer\\ Williams \\\n    --company-id com.spilliams \\\n    --logformat xcode \\\n    --verbose 6 \\\n    --keep-undocumented-objects \\\n    --keep-undocumented-members \\\n    --keep-intermediate-files \\\n    --no-repeat-first-par \\\n    --no-warn-invalid-crossref \\\n    --docset-copyright \"This is free and unencumbered software released into the public domain.\"\n    --ignore .m \\\n    --ignore \"${PROJECT_DIR}/Documentation\" \\\n    --ignore \"${PROJECT_DIR}/Demos\" \\\n    --output \"${PROJECT_DIR}/Documentation\" \\\n    \"${PROJECT_DIR}\"";
+			shellScript = "/usr/local/bin/appledoc \\\n    --project-name SWSoftKeyboard \\\n    --project-company Spencer\\ Williams \\\n    --company-id com.spilliams \\\n    --logformat xcode \\\n    --verbose 6 \\\n    --keep-undocumented-objects \\\n    --keep-undocumented-members \\\n    --keep-intermediate-files \\\n    --no-repeat-first-par \\\n    --no-warn-invalid-crossref \\\n    --docset-copyright \"This is free and unencumbered software released into the public domain.\" \\\n    --ignore .m \\\n    --ignore \"${PROJECT_DIR}/Documentation\" \\\n    --ignore \"${PROJECT_DIR}/Demos\" \\\n    --output \"${PROJECT_DIR}/Documentation\" \\\n    \"${PROJECT_DIR}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
