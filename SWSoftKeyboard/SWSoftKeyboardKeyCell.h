@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "SWSoftKeyboardProtocols.h"
 
 typedef enum {
     SKKeyTypeContent,
@@ -26,29 +27,6 @@ typedef enum {
     SKControlTypeNext
     // no Cmd type because I don't want to steal Apple's thunder.
 } SKControlType;
-
-@class SWSoftKeyboardKeyCell;
-
-/**
- Objects that inherit this protocol may choose to respond to key events.
- */
-@protocol SWKeyDelegate <NSObject>
-/**
- Notifies the delegate that a key has been toggled on or off
- @param key The key.
- */
-- (void)softKeyboardKeyToggled:(SWSoftKeyboardKeyCell *)key;
-/**
- Notifies the delegate that the key has been pressed
- @param key The key
- */
-- (void)softKeyboardKeyPressed:(SWSoftKeyboardKeyCell *)key;
-@end
-
-
-
-
-
 
 /**
  A SWSoftKeyboardKeyCell is an NSButtonCell that belongs to an SWSoftKeyboard.

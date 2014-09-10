@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@protocol SWKeyDelegate;
+#import "SWSoftKeyboardProtocols.h"
 
 /// An interface that describes how to interact with a keyboard layout
 @interface SWSoftKeyboardLayout : NSObject

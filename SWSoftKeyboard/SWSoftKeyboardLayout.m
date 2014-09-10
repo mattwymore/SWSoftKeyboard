@@ -38,8 +38,13 @@
                                      [stuckLabels copy],[NSNumber numberWithBool:NO],
                                      [stuckLabels copy],[NSNumber numberWithBool:YES],nil];
         
-//        SWSoftKeyboardKeyCell *key = [[SWSoftKeyboardKeyCell alloc] initWithFrame:NSZeroRect stateLabels:stateLabels stateValues:[stateLabels copy] sticky:NO keyDelegate:self.keyDelegate];
-//        [keys addObject:key];
+        SWSoftKeyboardKeyCell *key = [[SWSoftKeyboardKeyCell alloc] initWithFrame:NSZeroRect
+                                                                      stateLabels:stateLabels
+                                                                      stateValues:[stateLabels copy]
+                                                                          keyType:SKKeyTypeContent
+                                                                      controlType:SKControlTypeNone
+                                                                      keyDelegate:self.keyDelegate];
+        [keys addObject:key];
     }
     return keys;
 
