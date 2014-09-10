@@ -60,16 +60,5 @@
  @return Common alphabet keys in QWERTY order.
  */
 - (NSArray *)commonAlphabetKeys;
-/**
- Returns some basic control keys
- 
- @param hasFn   Whether or not to include a fn ("function") key
- @param hasControl  Whether or not to include a "control" key
- @param hasAlt  Whether or not to include an "alt" key
- @param hasShift    Whether or not to include a "shift" key
- @param hasDone     Whether or not to include a "done" key
- @param hasBackspace    Whether or not to include a "delete" key
- @return An array of control keys.
- */
-- (NSArray *)controlKeysWithFn:(BOOL)hasFn control:(BOOL)hasControl alt:(BOOL)hasAlt shift:(BOOL)hasShift command:(BOOL)hasCommand done:(BOOL)hasDone backspace:(BOOL)hasBackspace;
+
 @end

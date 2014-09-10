@@ -8,24 +8,36 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class SWSoftKeyboardKeyCell;
+typedef enum {
+    SKKeyTypeContent,
+    SKKeyTypeControl,
+    SKKeyTypeLayout
+} SKKeyType;
 
 typedef enum {
-    SWStickyKeyStateUp,
-    SWStickyKeyStateDown
-} SWStickyKeyState;
+    SKControlTypeNone,
+    SKControlTypeShift,
+    SKControlTypeBackspace,
+    SKControlTypeDelete,
+    SKControlTypeFn,
+    SKControlTypeCtrl,
+    SKControlTypeAlt,
+    SKControlTypeDone,
+    SKControlTypeNext
+    // no Cmd type because I don't want to steal Apple's thunder.
+} SKControlType;
+
+@class SWSoftKeyboardKeyCell;
 
 /**
  Objects that inherit this protocol may choose to respond to key events.
  */
 @protocol SWKeyDelegate <NSObject>
-@optional
 /**
- Notifies the delegate that a key has been "stuck" in a state
- @param key     The key.
- @param state   The sticky state the key is in.
+ Notifies the delegate that a key has been toggled on or off
+ @param key The key.
  */
-- (void)softKeyboardKey:(SWSoftKeyboardKeyCell *)key stickiedInState:(SWStickyKeyState)state;
+- (void)softKeyboardKeyToggled:(SWSoftKeyboardKeyCell *)key;
 /**
  Notifies the delegate that the key has been pressed
  @param key The key
@@ -39,56 +51,73 @@ typedef enum {
 
 
 /**
- Instances of SWSoftKeyboardKey represent individual keyboard keys. They contain certain
- state-related variables (`isSticky`, `stateLabels`, `stateValues`) as well as positioning
- values (`frame`).
+ A SWSoftKeyboardKeyCell is an NSButtonCell that belongs to an SWSoftKeyboard.
+ 
+ It contains dictionaries that describe how the button should look and what value
+ it represents for different keyboard states as well as for different selected states.
+ 
+ A key is one of three types: "content", "control" or "layout".
+ 
+ A key may be momentary (default) or "sticky". Sticky keys toggle between selected and
+ unselected. This attribute is derived, however. Currently only Control keys are sticky.
+ 
+ - **Content**: for example: letter keys, number keys, punctuation keys. Touching these keys represents adding content to the current text field.
+ - **Control**: for example: "fn", "ctrl", "alt/option", "cmd". Touching these keys represents changing the labels and values of (content) keys on the keyboard.
+ - **Layout**: These keys are a bit more abstract. There's no hardware equivalent, but on something like an iPhone keyboard, a key designed to switch the keyboard between QWERTY layout and numpad layout would be a "layout" key.
  */
-@interface SWSoftKeyboardKeyCell : NSActionCell
-/// The delegate to receive messages about this (sticky) key
+@interface SWSoftKeyboardKeyCell : NSButtonCell
+/// The delegate to receive messages about this key
 @property (nonatomic, weak) id<SWKeyDelegate>keyDelegate;
-/// What "sticky state" the key is in
-@property (nonatomic, assign) SWStickyKeyState stickyState;
-/// Whether or not this key is sticky
-@property (nonatomic, assign) BOOL isSticky;
+/// Whether or not this key is selected
+@property (nonatomic, assign) BOOL isSelected;
+/// The type of key.
+@property (nonatomic, assign) SKKeyType keyType;
+/// The control type this key holds (if its `keyType` is SKKeyTypeControl)
+@property (nonatomic, assign) SKControlType controlType;
 
 /**
- The labels this key uses for certain keyboard/sticky states.
+ The labels this key uses for certain keyboard/selected states.
 
- State dictionaries are stored such that the first dictionary key is the keyboard key's sticky
- state (whether or not the key is stuck), and the second dictionary key is the keyboard's layout state.
+ State dictionaries are stored such that the first dictionary key is the keyboard
+ key's selected state, and the second dictionary key is the keyboard's layout state.
  */
 @property (nonatomic, strong) NSDictionary *stateLabels;
-/// The values this key sends in certain keyboard/sticky states
+/// The values this key sends in certain keyboard/selected states
 /// @see stateLabels
 @property (nonatomic, strong) NSDictionary *stateValues;
 
 /**
  Initializes a new key with particular attributes
  @param frame       The key's frame
- @param stateLabels A dictionary of labels corresponding to specific keyboard/sticky states
- @param stateValues A dictionary of values corresponding to specific keyboard/sticky states
- @param isSticky    Whether or not the key is sticky
+ @param stateLabels A dictionary of labels corresponding to specific keyboard/selected states
+ @param stateValues A dictionary of values corresponding to specific keyboard/selected states
+ @param keyType     The type of key
+ @param controlType The type of control the key holds (if it's a control key)
  @param keyDelegate The key's delegate
  */
 - (id)initWithFrame:(NSRect)frame
         stateLabels:(NSDictionary *)stateLabels
         stateValues:(NSDictionary *)stateValues
-             sticky:(BOOL)isSticky
+            keyType:(SKKeyType)keyType
+        controlType:(SKControlType)controlType
      keyDelegate:(id<SWKeyDelegate>)keyDelegate;
 /**
- Returns the label for a particular keyboard state, taking into account the key's sticky state
+ Returns the label for a particular keyboard state, taking into account the key's selected state
  @param keyboardState The keyboard's layout state
  @see stateLabels
- @return May be an instance of NSString or NSImage
+ @return The cell's view
  */
-- (id)labelForKeyboardState:(int)keyboardState;
+- (NSView *)labelForKeyboardState:(int)keyboardState;
 /**
- Returns the key's value for a particular keyboard state and key sticky state.
+ Returns the key's value for a particular keyboard state and key selected state.
  @param keyboardState The keyboard's layout state
  @see stateLabels
  @return the key value
  */
 - (NSString *)valueForKeyboardState:(int)keyboardState;
-
+/**
+ Updates the cell's look to match a keyboard state and the key's selected state.
+ @param keyboardState The keyboard's layout state
+ */
 - (void)updateForKeyboardState:(int)keyboardState;
 @end

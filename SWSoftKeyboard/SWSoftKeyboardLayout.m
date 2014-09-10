@@ -35,18 +35,17 @@
                                      upperLetter,[NSNumber numberWithInt:1],nil];
         // stuck and notstuck labels and values are identical: these keys aren't sticky
         NSDictionary *stateLabels = [NSDictionary dictionaryWithObjectsAndKeys:
-                                     [stuckLabels copy],[NSNumber numberWithInt:SWStickyKeyStateUp],
-                                     [stuckLabels copy],[NSNumber numberWithInt:SWStickyKeyStateDown],nil];
+                                     [stuckLabels copy],[NSNumber numberWithBool:NO],
+                                     [stuckLabels copy],[NSNumber numberWithBool:YES],nil];
         
-        SWSoftKeyboardKeyCell *key = [[SWSoftKeyboardKeyCell alloc] initWithFrame:NSZeroRect stateLabels:stateLabels stateValues:[stateLabels copy] sticky:NO keyDelegate:self.keyDelegate];
-        [keys addObject:key];
+//        SWSoftKeyboardKeyCell *key = [[SWSoftKeyboardKeyCell alloc] initWithFrame:NSZeroRect stateLabels:stateLabels stateValues:[stateLabels copy] sticky:NO keyDelegate:self.keyDelegate];
+//        [keys addObject:key];
     }
     return keys;
 
 }
 - (NSArray *)commonAlphabetKeys
 {
-    NSMutableArray *keys = [NSMutableArray new];
     NSArray *lowercase = @[@"q",@"w",@"e",@"r",@"t",@"y",@"u",@"i",@"o",@"p",@"a",@"s",@"d",@"f",@"g",@"h",@"j",@"k",@"l",@"z",@"x",@"c",@"v",@"b",@"n",@"m"];
     NSArray *uppercase = @[@"Q",@"W",@"E",@"R",@"T",@"Y",@"U",@"I",@"O",@"P",@"A",@"S",@"D",@"F",@"G",@"H",@"J",@"K",@"L",@"Z",@"X",@"C",@"V",@"B",@"N",@"M"];
     return [self simpleKeysFromKeyboardShiftUpCharacters:lowercase keyboardShiftDownCharacters:uppercase];

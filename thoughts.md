@@ -44,6 +44,26 @@ this is a bit limiting, probably. Can we have matrix cells of different width? A
 
 So how do we do this then? the keyboard is a View and the keys are Buttons?
 
+-----
+
+I have a hunch that keys and key cells are gonna want to be two different things
+Sounds like I want to write UCSoftKeyboard as a subclass of NSControl, and it should contain a bunch of UCSoftKeyboardKeyCells which are subclassed from NSActionCell.
+UCSoftKeyboard would act much like NSMatrix.
+
+It looks like NSMatrix is really just a layer on top of NSControl that keeps track of a grid of cells, cell class and/or prototype, and (possibly multiple) selection.
+
+It also looks like an NSButton (sub of NSControl) contains 1 NSButtonCell (sub of NSActionCell). So maybe UCSoftKeyboardKeyCell is a subclass of NSButtonCell? NSButtonCell has concept of shoing title and/or image, which NSActionCell does not.
+
+It looks like NSButtonCell doesn't store selected state. Well, I think maybe we're gonna depart from that a little, because it's ridiculous for the keyboard to keep track of selected states of N instance of M types of sticky keys.
+
+So: the idea that Keys and KeyCells might be separate. how does that impact Keyboard and KeyboardLayout?
+
+----
+
+SKControlType has a bad codesmell about it. User should be able to have arbitrary number/name of meta keys. These should be a separate class?  
+Should content, control and layout each be subclasses of SWSoftKeyboardKeyCell?
+
+
 #9/4
 
 attempting to organize my thoughts wrt keyboard

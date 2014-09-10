@@ -38,14 +38,12 @@
     NSArray *punctuationLetters = @[@"@",@"-",@"_",@".",@"+"];
     NSArray *punctuationKeys = [self simpleKeysFromKeyboardShiftUpCharacters:punctuationLetters
                                                  keyboardShiftDownCharacters:punctuationLetters];
-    NSArray *controlKeys = [self controlKeysWithFn:NO control:NO alt:NO shift:YES command:NO done:YES backspace:NO];
     
     // TODO: update frame data for all keys
     
     [keysArray addObjectsFromArray:alphabetKeys];
     [keysArray addObjectsFromArray:numberKeys];
     [keysArray addObjectsFromArray:punctuationKeys];
-    [keysArray addObjectsFromArray:controlKeys];
     
     [self.keysForStates setObject:keysArray forKey:[NSNumber numberWithInt:layoutState]];
     

@@ -26,21 +26,6 @@
     }
     return self;
 }
-- (id)initWithFrame:(NSRect)frameRect mode:(NSMatrixMode)aMode cellClass:(Class)factoryId numberOfRows:(NSInteger)rowsHigh numberOfColumns:(NSInteger)colsWide
-{
-    if (self = [super initWithFrame:frameRect mode:aMode cellClass:factoryId numberOfRows:rowsHigh numberOfColumns:colsWide]) {
-        [self commonInit];
-    }
-    return self;
-}
-- (id)initWithFrame:(NSRect)frameRect mode:(NSMatrixMode)aMode prototype:(NSCell *)aCell numberOfRows:(NSInteger)rowsHigh numberOfColumns:(NSInteger)colsWide
-{
-    if (self = [super initWithFrame:frameRect mode:aMode prototype:aCell numberOfRows:rowsHigh numberOfColumns:colsWide]) {
-        [self commonInit];
-    }
-    return self;
-}
-
 - (id)initWithLayout:(SWSoftKeyboardLayout *)keyboardLayout
 {
     if (self = [super init]) {
@@ -52,8 +37,7 @@
 
 - (void)commonInit
 {
-    // TODO: custom nsmatrix overriding
-//    [self setPrototype:<#(id)#>
+    
 }
 
 - (void)setKeyboardLayout:(SWSoftKeyboardLayout *)keyboardLayout
@@ -65,6 +49,11 @@
 
 - (void)setLayoutState:(int)layoutState
 {
+    if (layoutState < 0 ||
+        layoutState > self.keyboardLayout.layoutStates) {
+        NSLog(@"SWSoftKeyboard tried to enter invalid layout state %i",layoutState);
+        return;
+    }
     _layoutState = layoutState;
     [self setKeys:[self.keyboardLayout keysForState:layoutState]];
     self.needsDisplay = YES;
@@ -83,6 +72,17 @@
     [super drawRect:dirtyRect];
     
     // Drawing code here.
+}
+
+#pragma mark - SWKeyDelegate Protocol
+
+- (void)softKeyboardKeyPressed:(SWSoftKeyboardKeyCell *)key
+{
+    
+}
+- (void)softKeyboardKeyToggled:(SWSoftKeyboardKeyCell *)key
+{
+    
 }
 
 @end
