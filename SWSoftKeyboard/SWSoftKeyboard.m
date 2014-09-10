@@ -11,33 +11,34 @@
 
 @implementation SWSoftKeyboard
 
-- (id)initWithFrame:(NSRect)frameRect
-{
-    if (self = [super initWithFrame:frameRect]) {
-        [self commonInit];
-    }
-    return self;
-}
-- (id)initWithCoder:(NSCoder *)coder
-{
-    if (self = [super initWithCoder:coder]) {
-        [self commonInit];
-    }
-    return self;
-}
+//- (id)initWithFrame:(NSRect)frameRect
+//{
+//    if (self = [super initWithFrame:frameRect]) {
+//        [self commonInit];
+//    }
+//    return self;
+//}
+//- (id)initWithCoder:(NSCoder *)coder
+//{
+//    if (self = [super initWithCoder:coder]) {
+//        [self commonInit];
+//    }
+//    return self;
+//}
 - (id)initWithLayout:(id<SWSoftKeyboardLayout>)keyboardLayout
 {
     if (self = [super init]) {
         self.keyboardLayout = keyboardLayout;
-        [self commonInit];
+//        [self commonInit];
+        [self.layer setBackgroundColor:CGColorCreateGenericRGB(0.8, 0.2, 0, 1)];
     }
     return self;
 }
 
-- (void)commonInit
-{
-    
-}
+//- (void)commonInit
+//{
+//    
+//}
 
 - (void)setKeyboardLayout:(id<SWSoftKeyboardLayout>)keyboardLayout
 {
@@ -53,8 +54,12 @@
         NSLog(@"SWSoftKeyboard tried to enter invalid layout state %i",layoutState);
         return;
     }
+    
+    
     _layoutState = layoutState;
     [self setKeys:[self.keyboardLayout keysForState:layoutState]];
+    [self setFrame:[self.keyboardLayout keyboardFrameForState:0]];
+    
     self.needsDisplay = YES;
 }
 

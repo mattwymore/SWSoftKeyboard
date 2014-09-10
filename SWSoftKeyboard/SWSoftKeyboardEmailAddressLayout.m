@@ -54,7 +54,7 @@
 - (NSRect)keyboardFrameForState:(int)layoutState
 {
     // TODO: unimplemented
-    return NSZeroRect;
+    return NSMakeRect(0, 0, 500, 500);
 }
 - (int)layoutStates
 {

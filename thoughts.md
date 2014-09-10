@@ -1,3 +1,33 @@
+#9/10
+
+so. recent changes:
+
+the text field will now notify the app delegate when it becomes first responder (not just when editing starts, which it turns out is when the user starts typing, so not helpful for us). The app delegate then shows the keyboard, but nothing shows up. I'm going to have to get my hands dirty on some rects.
+
+Also, question: how to implement a "tap outside of textfield, textfield resigns FR"? Maybe that's on the VC/appD? How to do that in a way that's plug-n-play wrt SWSoftKeyboard?
+
+---
+
+Also still thinking about SKControlType not being an enum but subclasses. Check it:
+
+    @interface SWSoftKeyboardShiftKey : SWSoftKeyboardControlKey : SWSoftKeyboardKey (?)
+    @implementation SWSoftKeyboardShiftKey
+    - hit {
+        if (self.up) {
+            [self.keyboard setLayoutState:SKKeyboardLayoutShiftDown]
+        } else {
+            [self.keyboard setLayoutState:SKKeyboardLayoutShiftUp]
+        }
+    }
+
+or something like that. Except I don't like that the keys know about the keyboard's possible layout states. That seems wrong too. Am I overthinking this? (Probably, but) Maybe keyboards and meta keys are too ingrained to NOT use hard-coded control types. Too much freedom etc. Gotta set some **boundaries** for those other devs, they can't **handle** anything less.
+
+I guess for now I leave it as is and if it requires rework later then I can do that. No need to fix something that isn't broken (even if it smells bad).
+
+---
+
+
+
 #9/9
 
 ##key delegates by key type
@@ -93,12 +123,11 @@ typedef enum {
 examples of control: shift, return, delete
 example layout:
 
-@ . - _ +
-1 2 3 4 5 6 7 8 9 0 ⌫
-Q W E R T Y U I O P
- A S D F G H J K L ⏎
-   Z X C V B N M
- ⌂ -----space---- ⌂
+    1 2 3 4 5 6 7 8 9 0 ⌫
+    Q W E R T Y U I O P
+     A S D F G H J K L ⏎
+       Z X C V B N M
+      ⌂ ⌴ @ . - _ + ⌂
  
 (after reading a lot on text stuff in the [Cocoa Event Handling Guide](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/EventOverview/HandlingKeyEvents/HandlingKeyEvents.html) and the [Cocoa Text Architecture Guide](https://developer.apple.com/LIBRARY/mac/documentation/TextFonts/Conceptual/CocoaTextArchitecture/TextEditing/TextEditing.html#//apple_ref/doc/uid/TP40009459-CH3-SW1)
 I don't need to fake real, system-level key events. In fact, if I do (and the keyboard contains ⌘) then the user can easily break out of the experience.
