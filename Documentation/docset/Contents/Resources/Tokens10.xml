@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/SKControlType.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/SKControlType</TokenIdentifier>
+			<Abstract type="html">This has a bad codesmell to it...</Abstract>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+            
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SKControlTypeNone</TokenIdentifier>
+            <Abstract type="html">A key with no control</Abstract>
+            <Declaration>SKControlTypeNone</Declaration>
+            
+            <DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+            
+            <NodeRef refid="10"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SKControlTypeShift</TokenIdentifier>
+            <Abstract type="html">A shift key</Abstract>
+            <Declaration>SKControlTypeShift</Declaration>
+            
+            <DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+            
+            <NodeRef refid="10"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SKControlTypeBackspace</TokenIdentifier>
+            <Abstract type="html">A backspace key</Abstract>
+            <Declaration>SKControlTypeBackspace</Declaration>
+            
+            <DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+            
+            <NodeRef refid="10"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SKControlTypeDelete</TokenIdentifier>
+            <Abstract type="html">A (forward) delete key</Abstract>
+            <Declaration>SKControlTypeDelete</Declaration>
+            
+            <DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+            
+            <NodeRef refid="10"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SKControlTypeFn</TokenIdentifier>
+            <Abstract type="html">A function key</Abstract>
+            <Declaration>SKControlTypeFn</Declaration>
+            
+            <DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+            
+            <NodeRef refid="10"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SKControlTypeCtrl</TokenIdentifier>
+            <Abstract type="html">A control key</Abstract>
+            <Declaration>SKControlTypeCtrl</Declaration>
+            
+            <DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+            
+            <NodeRef refid="10"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SKControlTypeAlt</TokenIdentifier>
+            <Abstract type="html">An alt or option key</Abstract>
+            <Declaration>SKControlTypeAlt</Declaration>
+            
+            <DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+            
+            <NodeRef refid="10"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SKControlTypeDone</TokenIdentifier>
+            <Abstract type="html">A done key</Abstract>
+            <Declaration>SKControlTypeDone</Declaration>
+            
+            <DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+            
+            <NodeRef refid="10"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SKControlTypeNext</TokenIdentifier>
+            <Abstract type="html">A next key</Abstract>
+            <Declaration>SKControlTypeNext</Declaration>
+            
+            <DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+            
+            <NodeRef refid="10"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SKControlTypePrevious</TokenIdentifier>
+            <Abstract type="html">A previous key</Abstract>
+            <Declaration>SKControlTypePrevious</Declaration>
+            
+            <DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+            
+            <NodeRef refid="10"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/SWKeyDelegate.html">
+	<File path="Classes/SWTextField.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/SWKeyDelegate</TokenIdentifier>
-			<Abstract type="html">Objects that inherit this protocol may choose to respond to key events.</Abstract>
-			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SWTextField</TokenIdentifier>
+			<Abstract type="html">A custom text field that notifies its First Responder Delegate about
+first responder events</Abstract>
+			<DeclaredIn>SWTextField.h</DeclaredIn>
             
 			
 			<NodeRef refid="5"/>
@@ -13,39 +14,38 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/SWKeyDelegate/softKeyboardKey:stickiedInState:</TokenIdentifier>
-			<Abstract type="html">Notifies the delegate that a key has been &quot;stuck&quot; in a state</Abstract>
-			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/SWTextField/setFirstResponderDelegate:</TokenIdentifier>
+			<Abstract type="html">The field&apos;s first responder delegate.</Abstract>
+			<DeclaredIn>SWTextField.h</DeclaredIn>
 			
-			<Declaration>- (void)softKeyboardKey:(SWSoftKeyboardKeyCell *)key stickiedInState:(SWStickyKeyState)state</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>key</Name>
-					<Abstract type="html">The key.</Abstract>
-				</Parameter><Parameter>
-					<Name>state</Name>
-					<Abstract type="html">The sticky state the key is in.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, weak) id&lt;SWTextFieldFirstResponderDelegate&gt; firstResponderDelegate</Declaration>
 			
-			<Anchor>//api/name/softKeyboardKey:stickiedInState:</Anchor>
+			
+			<Anchor>//api/name/firstResponderDelegate</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/SWKeyDelegate/softKeyboardKeyPressed:</TokenIdentifier>
-			<Abstract type="html">Notifies the delegate that the key has been pressed</Abstract>
-			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/SWTextField/firstResponderDelegate</TokenIdentifier>
+			<Abstract type="html">The field&apos;s first responder delegate.</Abstract>
+			<DeclaredIn>SWTextField.h</DeclaredIn>
 			
-			<Declaration>- (void)softKeyboardKeyPressed:(SWSoftKeyboardKeyCell *)key</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>key</Name>
-					<Abstract type="html">The key</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, weak) id&lt;SWTextFieldFirstResponderDelegate&gt; firstResponderDelegate</Declaration>
 			
-			<Anchor>//api/name/softKeyboardKeyPressed:</Anchor>
+			
+			<Anchor>//api/name/firstResponderDelegate</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SWTextField/firstResponderDelegate</TokenIdentifier>
+			<Abstract type="html">The field&apos;s first responder delegate.</Abstract>
+			<DeclaredIn>SWTextField.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SWTextFieldFirstResponderDelegate&gt; firstResponderDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/firstResponderDelegate</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		

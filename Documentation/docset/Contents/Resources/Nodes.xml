@@ -15,6 +15,7 @@
 						<NodeRef refid="2"/>
 						<NodeRef refid="3"/>
 						<NodeRef refid="4"/>
+						<NodeRef refid="5"/>
 						
 					</Subnodes>
 				</Node>
@@ -25,13 +26,25 @@
 					<Name>Protocols</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="5"/>
 						<NodeRef refid="6"/>
+						<NodeRef refid="7"/>
+						<NodeRef refid="8"/>
+						<NodeRef refid="9"/>
 						
 					</Subnodes>
 				</Node>
 				
                 
+				<Node>
+					<Name>Constants</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="10"/>
+						<NodeRef refid="11"/>
+						
+					</Subnodes>
+				</Node>
+				
                 
 			</Subnodes>
         </Node>
@@ -110,41 +123,62 @@
             
         </Node>
 		<Node id="4" type="file" documentType="reference">
-            <Name>SWSoftKeyboardLayout</Name>
-            <Path>Classes/SWSoftKeyboardLayout.html</Path>
+            <Name>SWSoftKeyboardLayoutHelper</Name>
+            <Path>Classes/SWSoftKeyboardLayoutHelper.html</Path>
             
                 <Subnodes>
                 <Node type="section">
-                    <Path>Classes/SWSoftKeyboardLayout.html</Path>
+                    <Path>Classes/SWSoftKeyboardLayoutHelper.html</Path>
                     <Name>Overview</Name>
                     <Anchor>overview</Anchor>
                 </Node>
                 <Node type="section">
-                    <Path>Classes/SWSoftKeyboardLayout.html</Path>
+                    <Path>Classes/SWSoftKeyboardLayoutHelper.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/SWSoftKeyboardLayoutHelper.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="5" type="file" documentType="reference">
+            <Name>SWTextField</Name>
+            <Path>Classes/SWTextField.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/SWTextField.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/SWTextField.html</Path>
                     <Name>Tasks</Name>
                     <Anchor>tasks</Anchor>
                 </Node>
                 
                 <Node type="section">
-                    <Path>Classes/SWSoftKeyboardLayout.html</Path>
+                    <Path>Classes/SWTextField.html</Path>
                     <Name>Properties</Name>
                     <Anchor>properties</Anchor>
                 </Node>
                 
                 
                 
-                <Node type="section">
-                    <Path>Classes/SWSoftKeyboardLayout.html</Path>
-                    <Name>Instance Methods</Name>
-                    <Anchor>instance_methods</Anchor>
-                </Node>
-                
             </Subnodes>
             
         </Node>
 		
 		
-        <Node id="5" type="file" documentType="reference">
+        <Node id="6" type="file" documentType="reference">
             <Name>SWKeyDelegate</Name>
             <Path>Protocols/SWKeyDelegate.html</Path>
             
@@ -171,7 +205,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="6" type="file" documentType="reference">
+		<Node id="7" type="file" documentType="reference">
             <Name>SWSoftKeyboardDelegate</Name>
             <Path>Protocols/SWSoftKeyboardDelegate.html</Path>
             
@@ -198,8 +232,78 @@
             </Subnodes>
             
         </Node>
+		<Node id="8" type="file" documentType="reference">
+            <Name>SWSoftKeyboardLayout</Name>
+            <Path>Protocols/SWSoftKeyboardLayout.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Protocols/SWSoftKeyboardLayout.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Protocols/SWSoftKeyboardLayout.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Protocols/SWSoftKeyboardLayout.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Protocols/SWSoftKeyboardLayout.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="9" type="file" documentType="reference">
+            <Name>SWTextFieldFirstResponderDelegate</Name>
+            <Path>Protocols/SWTextFieldFirstResponderDelegate.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Protocols/SWTextFieldFirstResponderDelegate.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Protocols/SWTextFieldFirstResponderDelegate.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Protocols/SWTextFieldFirstResponderDelegate.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
 		
-        
+        <Node id="10" type="file" documentType="reference">
+            <Name>SKControlType</Name>
+            <Path>Constants/SKControlType.html</Path>
+            
+        </Node>
+		<Node id="11" type="file" documentType="reference">
+            <Name>SKKeyType</Name>
+            <Path>Constants/SKKeyType.html</Path>
+            
+        </Node>
+		
         
 	</Library>
 </DocSetNodes>

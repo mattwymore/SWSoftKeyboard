@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SWTextFieldFirstResponderDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SWTextFieldFirstResponderDelegate</TokenIdentifier>
+			<Abstract type="html">Objects that implement this protocol may choose to act on first responder events</Abstract>
+			<DeclaredIn>SWSoftKeyboardProtocols.h</DeclaredIn>
+            
+			
+			<NodeRef refid="9"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SWTextFieldFirstResponderDelegate/controlWillBecomeFirstResponder:</TokenIdentifier>
+			<Abstract type="html">Fires when a text field will become a first responder</Abstract>
+			<DeclaredIn>SWSoftKeyboardProtocols.h</DeclaredIn>
+			
+			<Declaration>- (void)controlWillBecomeFirstResponder:(NSControl *)control</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>control</Name>
+					<Abstract type="html">The text field</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/controlWillBecomeFirstResponder:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SWTextFieldFirstResponderDelegate/controlDidBecomeFirstResponder:</TokenIdentifier>
+			<Abstract type="html">Fires when a text field has become a first responder</Abstract>
+			<DeclaredIn>SWSoftKeyboardProtocols.h</DeclaredIn>
+			
+			<Declaration>- (void)controlDidBecomeFirstResponder:(NSControl *)control</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>control</Name>
+					<Abstract type="html">The text field</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/controlDidBecomeFirstResponder:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SWTextFieldFirstResponderDelegate/controlFailedToBecomeFirstResponder:</TokenIdentifier>
+			<Abstract type="html">Fires when a text field failed to become a first responder</Abstract>
+			<DeclaredIn>SWSoftKeyboardProtocols.h</DeclaredIn>
+			
+			<Declaration>- (void)controlFailedToBecomeFirstResponder:(NSControl *)control</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>control</Name>
+					<Abstract type="html">The text field</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/controlFailedToBecomeFirstResponder:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SWTextFieldFirstResponderDelegate/controlWillResignFirstResponder:</TokenIdentifier>
+			<Abstract type="html">Fires when a text field will resign first responder</Abstract>
+			<DeclaredIn>SWSoftKeyboardProtocols.h</DeclaredIn>
+			
+			<Declaration>- (void)controlWillResignFirstResponder:(NSControl *)control</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>control</Name>
+					<Abstract type="html">The text field</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/controlWillResignFirstResponder:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SWTextFieldFirstResponderDelegate/controlDidResignFirstResponder:</TokenIdentifier>
+			<Abstract type="html">Fires when a text field has resigned first responder</Abstract>
+			<DeclaredIn>SWSoftKeyboardProtocols.h</DeclaredIn>
+			
+			<Declaration>- (void)controlDidResignFirstResponder:(NSControl *)control</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>control</Name>
+					<Abstract type="html">The text field</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/controlDidResignFirstResponder:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SWTextFieldFirstResponderDelegate/controlFailedToResignFirstResponder:</TokenIdentifier>
+			<Abstract type="html">Fires when a text field failed to resign first responder</Abstract>
+			<DeclaredIn>SWSoftKeyboardProtocols.h</DeclaredIn>
+			
+			<Declaration>- (void)controlFailedToResignFirstResponder:(NSControl *)control</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>control</Name>
+					<Abstract type="html">The text field</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/controlFailedToResignFirstResponder:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

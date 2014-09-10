@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/SKKeyType.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/SKKeyType</TokenIdentifier>
+			<Abstract type="html">The different types of keyboard keys</Abstract>
+			<DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+            
+			
+			<NodeRef refid="11"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SKKeyTypeContent</TokenIdentifier>
+            <Abstract type="html">A key that sends content to the keyboard</Abstract>
+            <Declaration>SKKeyTypeContent</Declaration>
+            
+            <DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+            
+            <NodeRef refid="11"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SKKeyTypeControl</TokenIdentifier>
+            <Abstract type="html">A key that controls the other keys on the keyboard (meta key)</Abstract>
+            <Declaration>SKKeyTypeControl</Declaration>
+            
+            <DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+            
+            <NodeRef refid="11"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SKKeyTypeLayout</TokenIdentifier>
+            <Abstract type="html">A key that controls the layout of the keyboard</Abstract>
+            <Declaration>SKKeyTypeLayout</Declaration>
+            
+            <DeclaredIn>SWSoftKeyboardKeyCell.h</DeclaredIn>
+            
+            <NodeRef refid="11"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

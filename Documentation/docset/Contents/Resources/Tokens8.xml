@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SWSoftKeyboardLayout.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SWSoftKeyboardLayout</TokenIdentifier>
+			<Abstract type="html">Objects that implement this protocol must provide details about how the layout looks and acts.</Abstract>
+			<DeclaredIn>SWSoftKeyboardProtocols.h</DeclaredIn>
+            
+			
+			<NodeRef refid="8"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SWSoftKeyboardLayout/setKeyDelegate:</TokenIdentifier>
+			<Abstract type="html">The delegate to pass to each of the keys</Abstract>
+			<DeclaredIn>SWSoftKeyboardProtocols.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SWKeyDelegate&gt; keyDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/keyDelegate</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SWSoftKeyboardLayout/keyDelegate</TokenIdentifier>
+			<Abstract type="html">The delegate to pass to each of the keys</Abstract>
+			<DeclaredIn>SWSoftKeyboardProtocols.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SWKeyDelegate&gt; keyDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/keyDelegate</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/SWSoftKeyboardLayout/keyDelegate</TokenIdentifier>
+			<Abstract type="html">The delegate to pass to each of the keys</Abstract>
+			<DeclaredIn>SWSoftKeyboardProtocols.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SWKeyDelegate&gt; keyDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/keyDelegate</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SWSoftKeyboardLayout/keysForState:</TokenIdentifier>
+			<Abstract type="html">The keys of this layout.</Abstract>
+			<DeclaredIn>SWSoftKeyboardProtocols.h</DeclaredIn>
+			
+			<Declaration>- (NSArray *)keysForState:(int)layoutState</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>layoutState</Name>
+					<Abstract type="html">The state of the layout</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The keys in a particular state of this layout</Abstract></ReturnValue>
+			<Anchor>//api/name/keysForState:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SWSoftKeyboardLayout/keyboardFrameForState:</TokenIdentifier>
+			<Abstract type="html">The keyboard&apos;s frame for a specific layout state.</Abstract>
+			<DeclaredIn>SWSoftKeyboardProtocols.h</DeclaredIn>
+			
+			<Declaration>- (NSRect)keyboardFrameForState:(int)layoutState</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>layoutState</Name>
+					<Abstract type="html">The layout state</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The keyboard&apos;s frame</Abstract></ReturnValue>
+			<Anchor>//api/name/keyboardFrameForState:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SWSoftKeyboardLayout/layoutStates</TokenIdentifier>
+			<Abstract type="html">The number of possible states of this layout.</Abstract>
+			<DeclaredIn>SWSoftKeyboardProtocols.h</DeclaredIn>
+			
+			<Declaration>- (int)layoutStates</Declaration>
+			
+			<ReturnValue><Abstract type="html">The number of possible states of thsi layout.</Abstract></ReturnValue>
+			<Anchor>//api/name/layoutStates</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

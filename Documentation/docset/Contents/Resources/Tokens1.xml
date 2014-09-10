@@ -53,7 +53,7 @@
 			<Abstract type="html">The keyboard&apos;s layout.</Abstract>
 			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) SWSoftKeyboardLayout *keyboardLayout</Declaration>
+			<Declaration>@property (nonatomic, weak) id&lt;SWSoftKeyboardLayout&gt; keyboardLayout</Declaration>
 			
 			
 			<Anchor>//api/name/keyboardLayout</Anchor>
@@ -65,7 +65,7 @@
 			<Abstract type="html">The keyboard&apos;s layout.</Abstract>
 			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) SWSoftKeyboardLayout *keyboardLayout</Declaration>
+			<Declaration>@property (nonatomic, weak) id&lt;SWSoftKeyboardLayout&gt; keyboardLayout</Declaration>
 			
 			
 			<Anchor>//api/name/keyboardLayout</Anchor>
@@ -77,7 +77,7 @@
 			<Abstract type="html">The keyboard&apos;s layout.</Abstract>
 			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) SWSoftKeyboardLayout *keyboardLayout</Declaration>
+			<Declaration>@property (nonatomic, weak) id&lt;SWSoftKeyboardLayout&gt; keyboardLayout</Declaration>
 			
 			
 			<Anchor>//api/name/keyboardLayout</Anchor>
@@ -161,7 +161,7 @@
 			<Abstract type="html">Initializes a new keyboard with a particular layout</Abstract>
 			<DeclaredIn>SWSoftKeyboard.h</DeclaredIn>
 			
-			<Declaration>- (id)initWithLayout:(SWSoftKeyboardLayout *)keyboardLayout</Declaration>
+			<Declaration>- (id)initWithLayout:(id&lt;SWSoftKeyboardLayout&gt;)keyboardLayout</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>keyboardLayout</Name>

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>SWSoftKeyboard Class Reference</title>
+		<title>SWSoftKeyboardLayoutHelper Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">SWSoftKeyboard Class Reference</h1>
+				<h1 class="hideInXcode">SWSoftKeyboardLayoutHelper Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -37,24 +37,15 @@
 	
 	
 	
-	<option value="properties">Properties</option>
-	
-	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
-	
-	<option value="//api/name/keyboardLayout">&nbsp;&nbsp;&nbsp;&nbsp;keyboardLayout</option>
-	
-	<option value="//api/name/keys">&nbsp;&nbsp;&nbsp;&nbsp;keys</option>
-	
-	<option value="//api/name/layoutState">&nbsp;&nbsp;&nbsp;&nbsp;layoutState</option>
 	
 	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/commonAlphabetKeys">&nbsp;&nbsp;&nbsp;&nbsp;+ commonAlphabetKeys</option>
+	
+	<option value="//api/name/simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:">&nbsp;&nbsp;&nbsp;&nbsp;+ simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:</option>
 	
 	
-	
-	
-	<option value="instance_methods">Instance Methods</option>
-	
-	<option value="//api/name/initWithLayout:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithLayout:</option>
 	
 	
 	
@@ -78,34 +69,24 @@
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/commonAlphabetKeys">commonAlphabetKeys</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keyboardLayout">keyboardLayout</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keys">keys</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/layoutState">layoutState</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:">simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:</a></span></li>
 	
 </ul></li>
 
 
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithLayout:">initWithLayout:</a></span></li>
-	
-</ul></li>
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="SWSoftKeyboard Class Reference" name="top"></a>
+				<a title="SWSoftKeyboardLayoutHelper Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -114,7 +95,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">SWSoftKeyboard Class Reference</h1>
+						<h1 class="title title-header">SWSoftKeyboardLayoutHelper Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -122,13 +103,10 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">NSControl</td>
-</tr><tr>
-	<td class="specification-title">Conforms to</td>
-	<td class="specification-value"><a href="../Protocols/SWKeyDelegate.html">SWKeyDelegate</a></td>
+	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">SWSoftKeyboard.h</td>
+	<td class="specification-value">SWSoftKeyboardLayoutHelper.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -138,7 +116,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A soft keyboard! handles the key presses, shift/sticky state</p>
+						<p>Contains methods to help out soft keyboard layouts</p>
 					</div>
 					
 					
@@ -156,31 +134,13 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+		<code><a href="#//api/name/simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:">+&nbsp;simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/keyboardLayout">&nbsp;&nbsp;keyboardLayout</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/layoutState">&nbsp;&nbsp;layoutState</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/keys">&nbsp;&nbsp;keys</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/initWithLayout:">&ndash;&nbsp;initWithLayout:</a></code>
+		<code><a href="#//api/name/commonAlphabetKeys">+&nbsp;commonAlphabetKeys</a></code>
 	</span>
 	
 	
@@ -193,188 +153,33 @@
 					
 					
 					
-					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/delegate" title="delegate"></a>
-	<h3 class="subsubtitle method-title">delegate</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The keyboard&rsquo;s delegate.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;SWSoftKeyboardDelegate&gt; delegate</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SWSoftKeyboard.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/keyboardLayout" title="keyboardLayout"></a>
-	<h3 class="subsubtitle method-title">keyboardLayout</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The keyboard&rsquo;s layout.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;SWSoftKeyboardLayout&gt; keyboardLayout</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SWSoftKeyboard.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/keys" title="keys"></a>
-	<h3 class="subsubtitle method-title">keys</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The keyboard&rsquo;s keys</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSArray *keys</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SWSoftKeyboard.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/layoutState" title="layoutState"></a>
-	<h3 class="subsubtitle method-title">layoutState</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The keyboard&rsquo;s layout state. Initializes as 0.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) int layoutState</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SWSoftKeyboard.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
-					
-					
-					
 					
 					
 					<div class="section section-methods">
-						<a title="Instance Methods" name="instance_methods"></a>
-						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithLayout:" title="initWithLayout:"></a>
-	<h3 class="subsubtitle method-title">initWithLayout:</h3>
+	<a name="//api/name/commonAlphabetKeys" title="commonAlphabetKeys"></a>
+	<h3 class="subsubtitle method-title">commonAlphabetKeys</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initializes a new keyboard with a particular layout</p>
+		<p>Returns common alphabet keys, in QWERTY order.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (id)initWithLayout:(id&lt;SWSoftKeyboardLayout&gt;)<em>keyboardLayout</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)commonAlphabetKeys</code></div>
 
     
 	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>keyboardLayout</em></dt>
-			<dd><p>The layout.</p></dd>
-		</dl>
-		
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Common alphabet keys in QWERTY order.</p>
 	</div>
 	
 	
@@ -387,17 +192,80 @@
 	
 	
 	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SWSoftKeyboardLayoutHelper.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:" title="simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:"></a>
+	<h3 class="subsubtitle method-title">simpleKeysFromKeyboardShiftUpCharacters:keyboardShiftDownCharacters:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an array of SWSoftKeyboardKeys based on an array of NSStrings.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)simpleKeysFromKeyboardShiftUpCharacters:(NSArray *)<em>keyboardShiftUpCharacters</em> keyboardShiftDownCharacters:(NSArray *)<em>keyboardShiftDownCharacters</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>keyboardShiftUpCharacters</em></dt>
+			<dd><p>An array of characters corresponding to the &ldquo;shift key up (unstuck)&rdquo; layout state</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>keyboardShiftDownCharacters</em></dt>
+			<dd><p>An array of characters corresponding to the &ldquo;shift key down (stuck)&rdquo; layout state</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An array of SWSoftKeyboardKeys</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Assumes two layout states: 0=shift key unpressed (unstuck), 1=shift key pressed (stuck).
+Key values will be identical to key labels.
+Key values and labels will not change between key sticky states.</p>
+	</div>
+	
+	
+	
+	
+	
 	
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SWSoftKeyboard.h</code><br />
+		<code class="declared-in-ref">SWSoftKeyboardLayoutHelper.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 					</div>
+					
+					
 					
 					
                     
