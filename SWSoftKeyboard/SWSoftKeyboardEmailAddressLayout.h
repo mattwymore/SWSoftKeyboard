@@ -6,9 +6,9 @@
 //  This is free and unencumbered software released into the public domain.
 //
 
-#import "SWSoftKeyboardLayout.h"
+#import "SWSoftKeyboardProtocols.h"
 
 /// A keyboard layout designed for typing email addresses
-@interface SWSoftKeyboardEmailAddressLayout : SWSoftKeyboardLayout
+@interface SWSoftKeyboardEmailAddressLayout : NSObject <SWSoftKeyboardLayout>
 
 @end

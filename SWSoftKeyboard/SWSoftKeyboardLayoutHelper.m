@@ -1,26 +1,16 @@
 //
-//  SWSoftKeyboardLayout.m
+//  SWSoftKeyboardLayoutHelper.m
 //  SWSoftKeyboard
 //
-//  Created by Spencer Williams on 9/4/14.
-//  This is free and unencumbered software released into the public domain.
+//  Created by Spencer Williams on 9/10/14.
+//  Copyright (c) 2014 Spencer Williams. All rights reserved.
 //
 
-#import "SWSoftKeyboardLayout.h"
+#import "SWSoftKeyboardLayoutHelper.h"
 #import "SWSoftKeyboardKeyCell.h"
 
-@implementation SWSoftKeyboardLayout
-
-- (NSArray *)keysForState:(int)layoutState
-{
-    // empty layout
-    return @[];
-}
-- (int)layoutStates
-{
-    return 1;
-}
-- (NSArray *)simpleKeysFromKeyboardShiftUpCharacters:(NSArray *)keyboardShiftUpCharacters
+@implementation SWSoftKeyboardLayoutHelper
++ (NSArray *)simpleKeysFromKeyboardShiftUpCharacters:(NSArray *)keyboardShiftUpCharacters
                          keyboardShiftDownCharacters:(NSArray *)keyboardShiftDownCharacters
 {
     NSMutableArray *keys = [NSMutableArray new];
@@ -38,22 +28,19 @@
                                      [stuckLabels copy],[NSNumber numberWithBool:NO],
                                      [stuckLabels copy],[NSNumber numberWithBool:YES],nil];
         
-        SWSoftKeyboardKeyCell *key = [[SWSoftKeyboardKeyCell alloc] initWithFrame:NSZeroRect
-                                                                      stateLabels:stateLabels
+        SWSoftKeyboardKeyCell *key = [[SWSoftKeyboardKeyCell alloc] initWithStateLabels:stateLabels
                                                                       stateValues:[stateLabels copy]
                                                                           keyType:SKKeyTypeContent
-                                                                      controlType:SKControlTypeNone
-                                                                      keyDelegate:self.keyDelegate];
+                                                                      controlType:SKControlTypeNone];
         [keys addObject:key];
     }
     return keys;
-
+    
 }
-- (NSArray *)commonAlphabetKeys
++ (NSArray *)commonAlphabetKeys
 {
     NSArray *lowercase = @[@"q",@"w",@"e",@"r",@"t",@"y",@"u",@"i",@"o",@"p",@"a",@"s",@"d",@"f",@"g",@"h",@"j",@"k",@"l",@"z",@"x",@"c",@"v",@"b",@"n",@"m"];
     NSArray *uppercase = @[@"Q",@"W",@"E",@"R",@"T",@"Y",@"U",@"I",@"O",@"P",@"A",@"S",@"D",@"F",@"G",@"H",@"J",@"K",@"L",@"Z",@"X",@"C",@"V",@"B",@"N",@"M"];
     return [self simpleKeysFromKeyboardShiftUpCharacters:lowercase keyboardShiftDownCharacters:uppercase];
 }
-
 @end

@@ -14,6 +14,13 @@
 
 @implementation SWSoftKeyboardKeyCell
 
+- (id)initWithStateLabels:(NSDictionary *)stateLabels
+              stateValues:(NSDictionary *)stateValues
+                  keyType:(SKKeyType)keyType
+              controlType:(SKControlType)controlType
+{
+    return [self initWithFrame:NSZeroRect stateLabels:stateLabels stateValues:stateValues keyType:keyType controlType:controlType keyDelegate:nil];
+}
 - (id)initWithFrame:(NSRect)frame
         stateLabels:(NSDictionary *)stateLabels
         stateValues:(NSDictionary *)stateValues

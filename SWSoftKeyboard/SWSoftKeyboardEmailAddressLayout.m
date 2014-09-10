@@ -7,12 +7,14 @@
 //
 
 #import "SWSoftKeyboardEmailAddressLayout.h"
+#import "SWSoftKeyboardLayoutHelper.h"
 
 @interface SWSoftKeyboardEmailAddressLayout ()
 @property (nonatomic, strong) NSMutableDictionary *keysForStates;
 @end
 
 @implementation SWSoftKeyboardEmailAddressLayout
+@synthesize keyDelegate;
 
 - (instancetype)init
 {
@@ -32,12 +34,12 @@
     
     NSMutableArray *keysArray = [NSMutableArray new];
     
-    NSArray *alphabetKeys = [self commonAlphabetKeys];
-    NSArray *numberKeys = [self simpleKeysFromKeyboardShiftUpCharacters:@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"0"]
-                                            keyboardShiftDownCharacters:@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"0"]];
+    NSArray *alphabetKeys = [SWSoftKeyboardLayoutHelper commonAlphabetKeys];
+    NSArray *numberKeys = [SWSoftKeyboardLayoutHelper simpleKeysFromKeyboardShiftUpCharacters:@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"0"]
+                                                                  keyboardShiftDownCharacters:@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"0"]];
     NSArray *punctuationLetters = @[@"@",@"-",@"_",@".",@"+"];
-    NSArray *punctuationKeys = [self simpleKeysFromKeyboardShiftUpCharacters:punctuationLetters
-                                                 keyboardShiftDownCharacters:punctuationLetters];
+    NSArray *punctuationKeys = [SWSoftKeyboardLayoutHelper simpleKeysFromKeyboardShiftUpCharacters:punctuationLetters
+                                                                       keyboardShiftDownCharacters:punctuationLetters];
     
     // TODO: update frame data for all keys
     
@@ -48,6 +50,11 @@
     [self.keysForStates setObject:keysArray forKey:[NSNumber numberWithInt:layoutState]];
     
     return keysArray;
+}
+- (NSRect)keyboardFrameForState:(int)layoutState
+{
+    // TODO: unimplemented
+    return NSZeroRect;
 }
 - (int)layoutStates
 {

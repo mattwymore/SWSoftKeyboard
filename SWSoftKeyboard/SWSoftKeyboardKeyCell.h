@@ -9,24 +9,42 @@
 #import <Cocoa/Cocoa.h>
 #import "SWSoftKeyboardProtocols.h"
 
-typedef enum {
+/// The different types of keyboard keys
+typedef NS_ENUM(NSInteger, SKKeyType) {
+    /// A key that sends content to the keyboard
     SKKeyTypeContent,
+    /// A key that controls the other keys on the keyboard (meta key)
     SKKeyTypeControl,
+    /// A key that controls the layout of the keyboard
     SKKeyTypeLayout
-} SKKeyType;
+};
 
-typedef enum {
+/// The different types of control key
+///
+/// This has a bad codesmell to it...
+typedef NS_ENUM(NSInteger, SKControlType) {
+    /// A key with no control
     SKControlTypeNone,
+    /// A shift key
     SKControlTypeShift,
+    /// A backspace key
     SKControlTypeBackspace,
+    /// A (forward) delete key
     SKControlTypeDelete,
+    /// A function key
     SKControlTypeFn,
+    /// A control key
     SKControlTypeCtrl,
+    /// An alt or option key
     SKControlTypeAlt,
+    /// A done key
     SKControlTypeDone,
-    SKControlTypeNext
+    /// A next key
+    SKControlTypeNext,
+    /// A previous key
+    SKControlTypePrevious
     // no Cmd type because I don't want to steal Apple's thunder.
-} SKControlType;
+};
 
 /**
  A SWSoftKeyboardKeyCell is an NSButtonCell that belongs to an SWSoftKeyboard.
@@ -64,6 +82,17 @@ typedef enum {
 /// @see stateLabels
 @property (nonatomic, strong) NSDictionary *stateValues;
 
+/**
+ Initializes a new key with particular attributes
+ @param stateLabels A dictionary of labels corresponding to specific keyboard/selected states
+ @param stateValues A dictionary of values corresponding to specific keyboard/selected states
+ @param keyType     The type of key
+ @param controlType The type of control the key holds (if it's a control key)
+ */
+- (id)initWithStateLabels:(NSDictionary *)stateLabels
+              stateValues:(NSDictionary *)stateValues
+                  keyType:(SKKeyType)keyType
+              controlType:(SKControlType)controlType;
 /**
  Initializes a new key with particular attributes
  @param frame       The key's frame

@@ -7,7 +7,6 @@
 //
 
 #import "SWSoftKeyboard.h"
-#import "SWSoftKeyboardLayout.h"
 #import "SWSoftKeyboardKeyCell.h"
 
 @implementation SWSoftKeyboard
@@ -26,7 +25,7 @@
     }
     return self;
 }
-- (id)initWithLayout:(SWSoftKeyboardLayout *)keyboardLayout
+- (id)initWithLayout:(id<SWSoftKeyboardLayout>)keyboardLayout
 {
     if (self = [super init]) {
         self.keyboardLayout = keyboardLayout;
@@ -40,7 +39,7 @@
     
 }
 
-- (void)setKeyboardLayout:(SWSoftKeyboardLayout *)keyboardLayout
+- (void)setKeyboardLayout:(id<SWSoftKeyboardLayout>)keyboardLayout
 {
     _keyboardLayout = keyboardLayout;
     [self.keyboardLayout setKeyDelegate:self];

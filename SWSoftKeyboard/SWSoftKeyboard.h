@@ -8,7 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "SWSoftKeyboardLayout.h"
 #import "SWSoftKeyboardProtocols.h"
 
 /// A soft keyboard! handles the key presses, shift/sticky state
@@ -16,12 +15,12 @@
 /// The keyboard's delegate.
 @property (nonatomic, weak) id<SWSoftKeyboardDelegate>delegate;
 /// The keyboard's layout.
-@property (nonatomic, strong) SWSoftKeyboardLayout *keyboardLayout;
+@property (nonatomic, weak) id<SWSoftKeyboardLayout> keyboardLayout;
 /// The keyboard's layout state. Initializes as 0.
 @property (nonatomic, assign) int layoutState;
 /// The keyboard's keys
 @property (nonatomic, strong) NSArray *keys;
 /// Initializes a new keyboard with a particular layout
 /// @param keyboardLayout The layout.
-- (id)initWithLayout:(SWSoftKeyboardLayout *)keyboardLayout;
+- (id)initWithLayout:(id<SWSoftKeyboardLayout>)keyboardLayout;
 @end
