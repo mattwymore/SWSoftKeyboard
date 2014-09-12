@@ -73,9 +73,12 @@
 
 - (void)drawRect:(NSRect)dirtyRect
 {
-    [super drawRect:dirtyRect];
+//    [super drawRect:dirtyRect];
     
     // Drawing code here.
+    
+    [[NSColor grayColor] set];
+    NSRectFill(self.bounds);
 }
 
 #pragma mark - SWKeyDelegate Protocol

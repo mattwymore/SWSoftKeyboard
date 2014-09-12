@@ -1,3 +1,14 @@
+#9/12
+
+getting into the SWKeyboard's drawRect method. Notice that something's off with the FR chain. It seems that the textfield, when highlighted, will become then resign immediately (or vice versa? hard to reproduce that though)
+
+what are my options on how to solve this?
+
+- debounce the FR notifications
+- trigger "show keyboard" on "becomes FR" and "hide keyboard" on everything **but** "resigns FR"
+
+ok great now switching between text fields doesn't trigger any FR events sometimes?!?
+
 #9/10
 
 so. recent changes:

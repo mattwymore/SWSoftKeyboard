@@ -479,6 +479,7 @@
 				0908BA4319BE320600F9D5F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0908BA4419BE320600F9D5F8 /* Build configuration list for PBXNativeTarget "SWSoftKeyboardDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +488,7 @@
 				0908BA4619BE320600F9D5F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
