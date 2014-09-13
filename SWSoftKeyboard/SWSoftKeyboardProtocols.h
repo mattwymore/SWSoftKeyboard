@@ -98,24 +98,20 @@
 @protocol SWTextFieldFirstResponderDelegate <NSObject>
 @optional
 /// Fires when a text field will become a first responder
-/// @param control The text field
-- (void)controlWillBecomeFirstResponder:(NSControl *)control;
+/// @param textField The text field
+- (void)textFieldWillBecomeFirstResponder:(NSTextField *)textField;
 /// Fires when a text field has become a first responder
-/// @param control The text field
-- (void)controlDidBecomeFirstResponder:(NSControl *)control;
-/// Fires when a text field failed to become a first responder
-/// @param control The text field
-- (void)controlFailedToBecomeFirstResponder:(NSControl *)control;
+/// @param textField    The text field
+/// @param success      Whether or not the becoming succeeded
+- (void)textField:(NSTextField *)textField didBecomeFirstResponder:(BOOL)success;
 
 /// Fires when a text field will resign first responder
-/// @param control The text field
-- (void)controlWillResignFirstResponder:(NSControl *)control;
+/// @param textField The text field
+- (void)textFieldWillResignFirstResponder:(NSTextField *)textField;
 /// Fires when a text field has resigned first responder
-/// @param control The text field
-- (void)controlDidResignFirstResponder:(NSControl *)control;
-/// Fires when a text field failed to resign first responder
-/// @param control The text field
-- (void)controlFailedToResignFirstResponder:(NSControl *)control;
+/// @param textField    The text field
+/// @param success      Whether or not the resignation succeeded
+- (void)textField:(NSTextField *)textField didResignFirstResponder:(BOOL)success;
 @end
 
 

@@ -79,6 +79,15 @@
     
     [[NSColor grayColor] set];
     NSRectFill(self.bounds);
+    
+    for (SWSoftKeyboardKeyCell *keyCell in self.keys) {
+        [[NSGraphicsContext currentContext] saveGraphicsState];
+        
+        // draw keycell
+//        keyCell drawWithFrame:keyCell inView:<#(NSView *)#>
+        
+        [[NSGraphicsContext currentContext] restoreGraphicsState];
+    }
 }
 
 #pragma mark - SWKeyDelegate Protocol

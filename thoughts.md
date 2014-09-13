@@ -7,7 +7,16 @@ what are my options on how to solve this?
 - debounce the FR notifications
 - trigger "show keyboard" on "becomes FR" and "hide keyboard" on everything **but** "resigns FR"
 
-ok great now switching between text fields doesn't trigger any FR events sometimes?!?
+ok great now switching between text fields doesn't trigger any FR events sometimes?!?  
+wait no that's just because I didn't have the firstResponderDelegate set on both text fields.
+
+---
+
+It will **not** be the case in my client's app that more than one text field (or even form element) will be present at the same time. Therefore:
+
+- I need to figure out why the text field is highlighted when the app starts, and disable that somehow
+- I don't need to worry about triggering `hideKeyboardAnimated:` because that will fire when the keyboard hits enter (which I can only test after the keyboard is implemented)
+- I have to figure out why `hideKeyboardAnimated:` isn't actually animated
 
 #9/10
 

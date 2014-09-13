@@ -685,6 +685,7 @@
                         </textFieldCell>
                         <connections>
                             <outlet property="delegate" destination="Voe-Tx-rLC" id="9wq-eT-8eI"/>
+                            <outlet property="firstResponderDelegate" destination="Voe-Tx-rLC" id="Kad-m9-1bX"/>
                         </connections>
                     </textField>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" tag="20" translatesAutoresizingMaskIntoConstraints="NO" id="ORi-3K-ZMf" customClass="SWTextField">
@@ -696,6 +697,7 @@
                         </textFieldCell>
                         <connections>
                             <outlet property="delegate" destination="Voe-Tx-rLC" id="yya-o0-jPX"/>
+                            <outlet property="firstResponderDelegate" destination="Voe-Tx-rLC" id="x9k-PV-dLD"/>
                         </connections>
                     </textField>
                 </subviews>

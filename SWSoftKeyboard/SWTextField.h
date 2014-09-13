@@ -13,5 +13,5 @@
 /// first responder events
 @interface SWTextField : NSTextField
 /// The field's first responder delegate.
-@property (nonatomic, weak) id<SWTextFieldFirstResponderDelegate> firstResponderDelegate;
+@property (nonatomic, weak) IBOutlet id<SWTextFieldFirstResponderDelegate> firstResponderDelegate;
 @end

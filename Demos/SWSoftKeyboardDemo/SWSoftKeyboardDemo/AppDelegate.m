@@ -27,7 +27,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     self.keyboard = [[SWSoftKeyboard alloc] initWithLayout:[SWSoftKeyboardEmailAddressLayout new]];
-    [self.textField setFirstResponderDelegate:self];
     keyboardShowing = NO;
 }
 
@@ -71,9 +70,10 @@
             }];
             
             CABasicAnimation *scrollOut = [CABasicAnimation animationWithKeyPath:@"position"];
+            [scrollOut setDuration:1.0];
             [scrollOut setFromValue:[NSValue valueWithPoint:self.keyboard.frame.origin]];
             NSPoint newPosition = NSMakePoint(self.keyboard.frame.origin.x, -1*self.keyboard.frame.size.height);
-            self.keyboard.layer.position = newPosition;
+//            self.keyboard.layer.position = newPosition;
             [scrollOut setToValue:[NSValue valueWithPoint:newPosition]];
             [self.keyboard.layer addAnimation:scrollOut forKey:@"position"];
             
@@ -86,22 +86,23 @@
 
 #pragma mark - SWFirstResponderDelegate
 
-- (void)controlWillBecomeFirstResponder:(NSControl *)control
+- (void)textFieldWillBecomeFirstResponder:(NSTextField *)textField
 {
-    NSLog(@"AppD control %ld will become FR. %@", (long)control.tag, [self.window firstResponder]);
+    NSLog(@"AppD control %ld will become FR. %@", (long)textField.tag, [self.window firstResponder]);
 }
-- (void)controlDidBecomeFirstResponder:(NSControl *)control
+- (void)textField:(NSTextField *)textField didBecomeFirstResponder:(BOOL)success
 {
-    NSLog(@"AppD control %ld did become FR. %@", (long)control.tag, [self.window firstResponder]);
-    [self showSoftKeyboardAnimated:NO];
+    NSLog(@"AppD control %ld did become FR. %@", (long)textField.tag, [self.window firstResponder]);
+    [self showSoftKeyboardAnimated:YES];
 }
-- (void)controlWillResignFirstResponder:(NSControl *)control
+
+- (void)textFieldWillResignFirstResponder:(NSTextField *)textField
 {
-    NSLog(@"AppD control %ld will resign FR. %@", (long)control.tag, [self.window firstResponder]);
+    NSLog(@"AppD control %ld will resign FR. %@", (long)textField.tag, [self.window firstResponder]);
 }
-- (void)controlDidResignFirstResponder:(NSControl *)control
+- (void)textField:(NSTextField *)textField didResignFirstResponder:(BOOL)success
 {
-    NSLog(@"AppD control %ld did resign FR. %@", (long)control.tag, [self.window firstResponder]);
+    NSLog(@"AppD control %ld did resign FR. %@", (long)textField.tag, [self.window firstResponder]);
 }
 
 #pragma mark - NSTextFieldDelegate
@@ -114,7 +115,7 @@
 - (void)controlTextDidEndEditing:(NSNotification *)obj
 {
     NSLog(@"AppD control %ld did end editing",[obj.object tag]);
-    [self hideSoftKeyboardAnimated:NO];
+    [self hideSoftKeyboardAnimated:YES];
 }
 
 @end

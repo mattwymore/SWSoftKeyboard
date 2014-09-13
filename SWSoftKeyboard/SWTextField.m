@@ -14,19 +14,16 @@
 - (BOOL)becomeFirstResponder
 {
     if (self.firstResponderDelegate &&
-        [self.firstResponderDelegate respondsToSelector:@selector(controlWillBecomeFirstResponder:)]) {
-        [self.firstResponderDelegate controlWillBecomeFirstResponder:self];
+        [self.firstResponderDelegate respondsToSelector:@selector(textFieldWillBecomeFirstResponder:)]) {
+        [self.firstResponderDelegate textFieldWillBecomeFirstResponder:self];
     }
     BOOL didBecomeFirstResponder = [super becomeFirstResponder];
-    if (didBecomeFirstResponder) {
-        if (self.firstResponderDelegate &&
-            [self.firstResponderDelegate respondsToSelector:@selector(controlDidBecomeFirstResponder:)]) {
-            [self.firstResponderDelegate controlDidBecomeFirstResponder:self];
-        }
-    } else {
-        if (self.firstResponderDelegate &&
-            [self.firstResponderDelegate respondsToSelector:@selector(controlFailedToBecomeFirstResponder:)]) {
-            [self.firstResponderDelegate controlFailedToBecomeFirstResponder:self];
+    if (self.firstResponderDelegate &&
+        [self.firstResponderDelegate respondsToSelector:@selector(textField:didBecomeFirstResponder:)]) {
+        if (didBecomeFirstResponder) {
+            [self.firstResponderDelegate textField:self didBecomeFirstResponder:YES];
+        } else {
+            [self.firstResponderDelegate textField:self didBecomeFirstResponder:NO];
         }
     }
     return didBecomeFirstResponder;
@@ -34,19 +31,16 @@
 - (BOOL)resignFirstResponder
 {
     if (self.firstResponderDelegate &&
-        [self.firstResponderDelegate respondsToSelector:@selector(controlWillResignFirstResponder:)]) {
-        [self.firstResponderDelegate controlWillResignFirstResponder:self];
+        [self.firstResponderDelegate respondsToSelector:@selector(textFieldWillResignFirstResponder:)]) {
+        [self.firstResponderDelegate textFieldWillResignFirstResponder:self];
     }
     BOOL didResignFirstResponder = [super resignFirstResponder];
-    if (didResignFirstResponder) {
-        if (self.firstResponderDelegate &&
-            [self.firstResponderDelegate respondsToSelector:@selector(controlDidResignFirstResponder:)]) {
-            [self.firstResponderDelegate controlDidResignFirstResponder:self];
-        }
-    } else {
-        if (self.firstResponderDelegate &&
-            [self.firstResponderDelegate respondsToSelector:@selector(controlFailedToResignFirstResponder:)]) {
-            [self.firstResponderDelegate controlFailedToResignFirstResponder:self];
+    if (self.firstResponderDelegate &&
+        [self.firstResponderDelegate respondsToSelector:@selector(textField:didResignFirstResponder:)]) {
+        if (didResignFirstResponder) {
+            [self.firstResponderDelegate textField:self didResignFirstResponder:YES];
+        } else {
+            [self.firstResponderDelegate textField:self didResignFirstResponder:NO];
         }
     }
     return didResignFirstResponder;
