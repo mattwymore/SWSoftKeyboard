@@ -38,6 +38,8 @@
 		0967784919BE2E0400220916 /* SWSoftKeyboardEmailAddressLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0967784119BE2E0400220916 /* SWSoftKeyboardEmailAddressLayout.m */; };
 		0967784E19BE2E0400220916 /* SWSoftKeyboardKeyCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0967784619BE2E0400220916 /* SWSoftKeyboardKeyCell.h */; };
 		0967784F19BE2E0400220916 /* SWSoftKeyboardKeyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0967784719BE2E0400220916 /* SWSoftKeyboardKeyCell.m */; };
+		09CCEC8F1A3683A700C4A807 /* SWSoftKeyboardLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CCEC8D1A3683A700C4A807 /* SWSoftKeyboardLayout.h */; };
+		09CCEC901A3683A700C4A807 /* SWSoftKeyboardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CCEC8E1A3683A700C4A807 /* SWSoftKeyboardLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		0967784119BE2E0400220916 /* SWSoftKeyboardEmailAddressLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSoftKeyboardEmailAddressLayout.m; sourceTree = "<group>"; };
 		0967784619BE2E0400220916 /* SWSoftKeyboardKeyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSoftKeyboardKeyCell.h; sourceTree = "<group>"; };
 		0967784719BE2E0400220916 /* SWSoftKeyboardKeyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSoftKeyboardKeyCell.m; sourceTree = "<group>"; };
+		09CCEC8D1A3683A700C4A807 /* SWSoftKeyboardLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSoftKeyboardLayout.h; sourceTree = "<group>"; };
+		09CCEC8E1A3683A700C4A807 /* SWSoftKeyboardLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSoftKeyboardLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 				0967784119BE2E0400220916 /* SWSoftKeyboardEmailAddressLayout.m */,
 				093ADAB219BE2D44005AADB0 /* Supporting Files */,
 				0908BA5D19C0B99700F9D5F8 /* SWSoftKeyboardProtocols.h */,
+				09CCEC8D1A3683A700C4A807 /* SWSoftKeyboardLayout.h */,
+				09CCEC8E1A3683A700C4A807 /* SWSoftKeyboardLayout.m */,
 				0908BA5F19C0C36200F9D5F8 /* SWSoftKeyboardLayoutHelper.h */,
 				0908BA6019C0C36200F9D5F8 /* SWSoftKeyboardLayoutHelper.m */,
 				0908BA6719C0E40A00F9D5F8 /* SWTextField.h */,
@@ -193,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0908BA6919C0E40A00F9D5F8 /* SWTextField.h in Headers */,
+				09CCEC8F1A3683A700C4A807 /* SWSoftKeyboardLayout.h in Headers */,
 				0967784E19BE2E0400220916 /* SWSoftKeyboardKeyCell.h in Headers */,
 				0967784819BE2E0400220916 /* SWSoftKeyboardEmailAddressLayout.h in Headers */,
 				0908BA6119C0C36200F9D5F8 /* SWSoftKeyboardLayoutHelper.h in Headers */,
@@ -318,6 +325,7 @@
 			files = (
 				0967784F19BE2E0400220916 /* SWSoftKeyboardKeyCell.m in Sources */,
 				0967784919BE2E0400220916 /* SWSoftKeyboardEmailAddressLayout.m in Sources */,
+				09CCEC901A3683A700C4A807 /* SWSoftKeyboardLayout.m in Sources */,
 				093ADABA19BE2D44005AADB0 /* SWSoftKeyboard.m in Sources */,
 				0908BA6A19C0E40A00F9D5F8 /* SWTextField.m in Sources */,
 				0908BA6219C0C36200F9D5F8 /* SWSoftKeyboardLayoutHelper.m in Sources */,
@@ -526,6 +534,7 @@
 				0908BA5B19BE369D00F9D5F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		093ADAA219BE2D44005AADB0 /* Build configuration list for PBXProject "SWSoftKeyboard" */ = {
 			isa = XCConfigurationList;
