@@ -14,8 +14,8 @@ Included in this codebase:
 
 For now this library is only installable statically.
 
-1. Download this repository and place it in a subdirectory of your project. (or perhaps [submodule](http://git-scm.com/docs/git-submodule) it)
-1. Drag `SWSoftKeyboard.xcodeproj` into your file navigator in Xcode
+1. Download this repository and place it in a subdirectory of your project. (or perhaps [submodule](http://git-scm.com/docs/git-submodule) it).
+1. Drag `SWSoftKeyboard.xcodeproj` into your file navigator in Xcode. You may have to add it to your build target's Target Dependencies, Link Binary With Libraries and Header Search Paths.
 1. in your app target's Build Phases tab, in the Target Dependencies section click the "+" button to add a dependency. Select SWSoftKeyboard
 1. in your app target's Build Phases tab, in the Link Binary With Libraries section click the "+" button to add a library. Select SWSoftKeyboard.framework
 1. in your app's code, you can now `#import <SWSoftKeyboard/SWSoftKeyboard.h>`
