@@ -7,7 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "SWSoftKeyboardProtocols.h"
+#import "SWSoftKeyboardLayoutHelper.h"
 #import "SWSoftKeyboardLayout.h"
+#import "SWSoftKeyboardEmailAddressLayout.h"
+#import "SWSoftKeyboardKeyCell.h"
+#import "SWTextField.h"
+
 
 /// The keyboard's delegate
 @protocol SWSoftKeyboardDelegate <NSObject>
