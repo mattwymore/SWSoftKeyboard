@@ -7,9 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <SWSoftKeyboard/SWSoftKeyboardProtocols.h>
+#import <SWSoftKeyboard/SWSoftKeyboard.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, NSTextFieldDelegate, SWTextFieldFirstResponderDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSTextFieldDelegate, SWSoftKeyboardDelegate, SWSoftKeyboardLayoutDelegate, SWTextFieldFirstResponderDelegate>
 
 
 @end
