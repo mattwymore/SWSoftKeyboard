@@ -10,37 +10,16 @@
 #import "SWSoftKeyboardKeyCell.h"
 
 @implementation SWSoftKeyboard
-
-//- (id)initWithFrame:(NSRect)frameRect
-//{
-//    if (self = [super initWithFrame:frameRect]) {
-//        [self commonInit];
-//    }
-//    return self;
-//}
-//- (id)initWithCoder:(NSCoder *)coder
-//{
-//    if (self = [super initWithCoder:coder]) {
-//        [self commonInit];
-//    }
-//    return self;
-//}
-- (id)initWithLayout:(id<SWSoftKeyboardLayout>)keyboardLayout
+- (id)initWithLayout:(SWSoftKeyboardLayout *)keyboardLayout
 {
     if (self = [super init]) {
         self.keyboardLayout = keyboardLayout;
-//        [self commonInit];
-        [self.layer setBackgroundColor:CGColorCreateGenericRGB(0.8, 0.2, 0, 1)];
+        self.wantsLayer = YES;
     }
     return self;
 }
 
-//- (void)commonInit
-//{
-//    
-//}
-
-- (void)setKeyboardLayout:(id<SWSoftKeyboardLayout>)keyboardLayout
+- (void)setKeyboardLayout:(SWSoftKeyboardLayout *)keyboardLayout
 {
     _keyboardLayout = keyboardLayout;
     [self.keyboardLayout setKeyDelegate:self];
@@ -57,9 +36,12 @@
     
     
     _layoutState = layoutState;
+    [self setFrame:[self.keyboardLayout keyboardFrameForState:layoutState]];
     [self setKeys:[self.keyboardLayout keysForState:layoutState]];
-    [self setFrame:[self.keyboardLayout keyboardFrameForState:0]];
-    
+    for (SWSoftKeyboardKeyCell *key in self.keys) {
+        key.keyDelegate = self;
+        [self addSubview:key];
+    }
     self.needsDisplay = YES;
 }
 
@@ -73,32 +55,110 @@
 
 - (void)drawRect:(NSRect)dirtyRect
 {
-//    [super drawRect:dirtyRect];
-    
-    // Drawing code here.
-    
-    [[NSColor grayColor] set];
+    [[NSColor colorWithCalibratedWhite:0.7 alpha:0.9] set];
     NSRectFill(self.bounds);
     
-    for (SWSoftKeyboardKeyCell *keyCell in self.keys) {
-        [[NSGraphicsContext currentContext] saveGraphicsState];
-        
-        // draw keycell
-//        keyCell drawWithFrame:keyCell inView:<#(NSView *)#>
-        
-        [[NSGraphicsContext currentContext] restoreGraphicsState];
-    }
 }
 
 #pragma mark - SWKeyDelegate Protocol
 
 - (void)softKeyboardKeyPressed:(SWSoftKeyboardKeyCell *)key
 {
+    NSWindow *activeWindow = [[NSApplication sharedApplication] mainWindow];
+    if (key.keyType == SKKeyTypeContent) {
+        if (key.controlType == SKControlTypeBackspace) {
+            NSEvent *keyDownEvent = [NSEvent keyEventWithType:NSKeyDown location:CGPointMake(0, 0) modifierFlags:0x100 timestamp:[[NSProcessInfo processInfo] systemUptime] windowNumber:[activeWindow windowNumber] context:nil characters:[key valueForKey] charactersIgnoringModifiers:[key valueForKey] isARepeat:NO keyCode:[key.keyCode unsignedShortValue]];
+            
+            [NSApp sendEvent:keyDownEvent];
+        }else{
+            NSEvent *keyDownEvent = [NSEvent keyEventWithType:NSKeyDown location:CGPointMake(0, 0) modifierFlags:0 timestamp:[[NSProcessInfo processInfo] systemUptime] windowNumber:[activeWindow windowNumber] context:[NSGraphicsContext graphicsContextWithWindow:activeWindow] characters:[key valueForKey] charactersIgnoringModifiers:[key valueForKey] isARepeat:NO keyCode:[key.keyCode unsignedShortValue]];
+            
+            [NSApp sendEvent:keyDownEvent];
+            
+        }
+    }else if (key.keyType == SKKeyTypeLayout){
+        for (SWSoftKeyboardKeyCell *key in self.keys) {
+            [key removeFromSuperview];
+        }
+        if (key.controlType == SKControlTypeNumeric) {
+            self.layoutState = 1;
+        }else{
+            self.layoutState = 0;
+        }
+        
+    }
     
 }
 - (void)softKeyboardKeyToggled:(SWSoftKeyboardKeyCell *)key
 {
+    if (key.controlType == SKControlTypeShift) {
+        for (SWSoftKeyboardKeyCell *contentKey in self.keys) {
+            [contentKey setShifted:key.isSelected];
+        }
+    }else if (key.controlType == SKControlTypeDone){
+        if (self.delegate && [self.delegate respondsToSelector:@selector(softKeyboardReadyToExit:)]) {
+            [self.delegate softKeyboardReadyToExit:self];
+        }
+    }
+}
+
+#pragma mark - show/hide
+- (void)showSoftKeyboardAnimated:(BOOL)animated
+{
+    if (self.keyboardShowing) return;
+    for (SWSoftKeyboardKeyCell *key in self.keys) {
+        [key removeFromSuperview];
+    }
+    [self.keyboardLayout emptyExistingKeys];
+    self.layoutState = 0;
     
+    NSWindow *activeWindow = nil;
+    if ([NSApp keyWindow]) {
+        activeWindow = [NSApp keyWindow];
+    }else if ([NSApp mainWindow]){
+        activeWindow = [NSApp mainWindow];
+    }else{
+        activeWindow = [NSApp windows][0];
+    }
+    
+    
+    NSRect oldFrame = NSMakeRect(self.frame.origin.x,
+                                 -1*self.frame.size.height,
+                                 self.frame.size.width,
+                                 self.frame.size.height);
+    [self setFrame:oldFrame];
+    if (!self.superview) {
+        [activeWindow.contentView addSubview:self];
+    }
+    NSRect newFrame = NSMakeRect(oldFrame.origin.x,
+                                 0,
+                                 oldFrame.size.width,
+                                 oldFrame.size.height);
+    if (animated) {
+        [[self animator] setFrame:newFrame];
+    } else {
+        [self setFrame:newFrame];
+    }
+    self.keyboardShowing = YES;
+}
+- (void)hideSoftKeyboardAnimated:(BOOL)animated
+{
+    if (!self.keyboardShowing) return;
+    if (animated) {
+        [NSAnimationContext currentContext].completionHandler =^{
+            [self removeFromSuperview];
+            self.keyboardShowing = NO;
+        };
+        NSRect newFrame = NSMakeRect(self.frame.origin.x, -1*self.frame.size.height, self.frame.size.width, self.frame.size.height);
+        [[self animator] setFrame:newFrame];
+    } else {
+        [self removeFromSuperview];
+        self.keyboardShowing = NO;
+    }
+}
+
+- (void)mouseDown:(NSEvent *)theEvent {
+    //trap the clicking so items under the keybaord do not recieve the event.
 }
 
 @end

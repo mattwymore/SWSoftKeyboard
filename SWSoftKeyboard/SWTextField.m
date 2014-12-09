@@ -45,4 +45,12 @@
     }
     return didResignFirstResponder;
 }
+
+- (void)keyDown:(NSEvent *)theEvent
+{
+    NSLog(@"chars: %@ - unmodchars: %@ - keyCode: %hu", theEvent.characters, theEvent.charactersIgnoringModifiers, theEvent.keyCode);
+    [super keyDown:theEvent];
+}
+
+
 @end

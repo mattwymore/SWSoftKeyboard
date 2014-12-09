@@ -42,8 +42,11 @@ typedef NS_ENUM(NSInteger, SKControlType) {
     /// A next key
     SKControlTypeNext,
     /// A previous key
-    SKControlTypePrevious
-    // no Cmd type because I don't want to steal Apple's thunder.
+    SKControlTypePrevious,
+    /// numeric key layout
+    SKControlTypeNumeric,
+    /// alpha key layout
+    SKControlTypeAlpha
 };
 
 /**
@@ -61,11 +64,13 @@ typedef NS_ENUM(NSInteger, SKControlType) {
  - **Control**: for example: "fn", "ctrl", "alt/option", "cmd". Touching these keys represents changing the labels and values of (content) keys on the keyboard.
  - **Layout**: These keys are a bit more abstract. There's no hardware equivalent, but on something like an iPhone keyboard, a key designed to switch the keyboard between QWERTY layout and numpad layout would be a "layout" key.
  */
-@interface SWSoftKeyboardKeyCell : NSButtonCell
+@interface SWSoftKeyboardKeyCell : NSButton
 /// The delegate to receive messages about this key
 @property (nonatomic, weak) id<SWKeyDelegate>keyDelegate;
 /// Whether or not this key is selected
 @property (nonatomic, assign) BOOL isSelected;
+/// Whether or not the key is acting as if the shift key is depressed or not;
+@property (nonatomic, assign) BOOL isShifted;
 /// The type of key.
 @property (nonatomic, assign) SKKeyType keyType;
 /// The control type this key holds (if its `keyType` is SKKeyTypeControl)
@@ -82,6 +87,7 @@ typedef NS_ENUM(NSInteger, SKControlType) {
 /// @see stateLabels
 @property (nonatomic, strong) NSDictionary *stateValues;
 
+@property (nonatomic, assign)NSNumber *keyCode;
 /**
  Initializes a new key with particular attributes
  @param stateLabels A dictionary of labels corresponding to specific keyboard/selected states
@@ -108,6 +114,24 @@ typedef NS_ENUM(NSInteger, SKControlType) {
             keyType:(SKKeyType)keyType
         controlType:(SKControlType)controlType
      keyDelegate:(id<SWKeyDelegate>)keyDelegate;
+
+/**
+ Initializes a new key with particular attributes
+ @param frame       The key's frame
+ @param stateLabels A dictionary of labels corresponding to specific keyboard/selected states
+ @param stateValues A dictionary of values corresponding to specific keyboard/selected states
+ @param keyCode
+ @param keyType     The type of key
+ @param controlType The type of control the key holds (if it's a control key)
+ @param keyDelegate The key's delegate
+ */
+- (id)initWithFrame:(NSRect)frame
+        stateLabels:(NSDictionary *)stateLabels
+        stateValues:(NSDictionary *)stateValues
+            keyCode:(NSNumber*)keyCode
+            keyType:(SKKeyType)keyType
+        controlType:(SKControlType)controlType
+        keyDelegate:(id<SWKeyDelegate>)keyDelegate;
 /**
  Returns the label for a particular keyboard state, taking into account the key's selected state
  @param keyboardState The keyboard's layout state
@@ -122,6 +146,18 @@ typedef NS_ENUM(NSInteger, SKControlType) {
  @return the key value
  */
 - (NSString *)valueForKeyboardState:(int)keyboardState;
+
+/**
+ Returns the key's value for the key's selected state.
+ @see stateValues
+ @return the key value
+ */
+- (NSString *)valueForKey;
+
+/**
+ toggles the keys shited state (from lower case to uppercase).
+ */
+- (void)setShifted:(BOOL)shifted;
 /**
  Updates the cell's look to match a keyboard state and the key's selected state.
  @param keyboardState The keyboard's layout state

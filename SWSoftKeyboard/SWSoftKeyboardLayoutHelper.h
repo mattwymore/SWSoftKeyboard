@@ -28,5 +28,10 @@
  @return Common alphabet keys in QWERTY order.
  */
 + (NSArray *)commonAlphabetKeys;
-
++ (NSArray *)qwertyLowerRows;
++ (NSArray *)qwertyUpperRows;
++ (NSArray *)qwertyKeyCodes;
++ (NSArray *)numericLowerRows;
++ (NSArray *)numericUpperRows;
++ (NSArray *)numericKeyCodes;
 @end
