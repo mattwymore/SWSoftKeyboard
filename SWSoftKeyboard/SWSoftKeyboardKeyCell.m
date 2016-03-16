@@ -14,6 +14,8 @@
 
 @implementation SWSoftKeyboardKeyCell
 
+@dynamic frame;
+
 - (id)initWithStateLabels:(NSDictionary *)stateLabels
               stateValues:(NSDictionary *)stateValues
                   keyType:(SKKeyType)keyType
